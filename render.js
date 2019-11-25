@@ -1,5 +1,24 @@
 /*
 //
+// Test Axios Request
+//
+export async function index()
+{
+    const result = await axios({
+        method: 'get',
+        url: 'https://developers.zomato.com/api/v2.1/cities?q=new%20york',
+        headers:
+        {
+            'user-key': 'ffa399745f3e1bfe2aff527fad6794f9',
+            'content-type': 'application/json'
+        },
+    })
+
+    console.log(result.data);
+    return;
+};
+
+//
 // Axios Functions
 //
 export async function index()
@@ -63,6 +82,7 @@ export const loadPostsIntoDOM = function(posts) {
 //
 // Main function to be executed upon page loading
 //
+
 $(async function()
 {
     let postData = await index();
@@ -72,5 +92,7 @@ $(async function()
     {
         handleLikeButtonPress(this, postData);
     })
+
+    await index();
 });
 */
