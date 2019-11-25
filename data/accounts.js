@@ -15,7 +15,8 @@ export default
                 itemId: 2221,
                 body: "some text about restaurant",
                 rating: 5,
-                upvotes: 0
+                upvotes: 0,
+                timeStamp: "mm/dd/yyyy"
             },
 
             {
@@ -23,7 +24,8 @@ export default
                 itemId: 2222,
                 body: "some more text about a different restaurant",
                 rating: 2,
-                upvotes: 3
+                upvotes: 3,
+                timeStamp: "mm/dd/yyyy"
             }
         ]
     },
