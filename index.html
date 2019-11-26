@@ -15,11 +15,14 @@
 
         <header>
             <div class = "main"> 
+                <button onclick="document.getElementById('id03').style.display='block'" style="width:auto; " class= "loginb">Explore</button>
+
                 <ul>
                     <li class="active"><a href="index.html"></a></li>
+
                     
-                    <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Login</button>
-                    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
+                    <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;" class= "loginb">Login</button>
+                    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class= "signb">Sign Up</button>
                     <!-- <li><a href="signup.html">Sign Up</a></li> Lead to Form page -->
                 </ul>
 
@@ -36,8 +39,8 @@
                
                 <h2>  </h2>
                 <div class="parallax"></div>
-                <div style="height:700px;background-color:rgba(0,0,0,0.5);font-size:36px">
-                        
+                <div class= "feed">
+                        <center>Browse through the tastiest Menu Items </center>
 
                         </div>
                
@@ -92,17 +95,17 @@ window.onclick = function(event) {
 
 
 <div id="id02" class="modal">
-        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
         <form class="modal-content" action="/action_page.php">
           <div class="container">
             <h1>Login</h1>
-            <p>Don't Have an Account? <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button></p>
+            <!--- <p>Don't Have an Account? <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button></p>--->
             <hr>
             <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="email" required>
+            <input type="text" placeholder="Enter Email" name="email" >
       
             <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
+            <input type="password" placeholder="Enter Password" name="psw">
             
             <label>
               <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
@@ -119,12 +122,12 @@ window.onclick = function(event) {
       
       <script>
       // Get the modal
-      var modal = document.getElementById('id01');
+      var modals = document.getElementById('id02');
       
       // When the user clicks anywhere outside of the modal, close it
       window.onclick = function(event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
+        if (event.target == modals) {
+          modal.sstyle.display = "none";
         }
       }
       </script>
@@ -132,6 +135,7 @@ window.onclick = function(event) {
         </header>
 
         <!-- Include links to JavaScript files below -->
+        <script src="https://kit.fontawesome.com/c7070aa968.js" crossorigin="anonymous"></script>
         <script src="./node_modules/axios/dist/axios.js"></script>
         <script src="./node_modules/jquery/dist/jquery.js"></script>
         <script src="./javascript/renderIndex.js" type="module"></script>

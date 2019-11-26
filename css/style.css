@@ -5,7 +5,7 @@
 header{
     background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../Images/IMG_33.jpg);
     /*linear gradient adds a shade over layer on top of background picture*/
-      height: 100vh; 
+    height: 100vh; 
     background-size: cover;
     background-position: center;
 
@@ -16,7 +16,7 @@ header{
     
   
     /* Set a specific height */
-    min-height: 700px;
+    min-height: 800px;
   
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -32,23 +32,6 @@ ul {
 }
 ul li{
     display: inline-block; 
-}
-ul li a:hover{ /* this bit chooses the colors of text and background when you hover over the options*/ 
-    color: #fff; 
-    padding: 5px 20px; 
-    border: 1px solid #fff; 
-  
-}
-ul li.active a{ /* This bit makes the home button default option and colors in the block white*/
-    padding: 5px 20px; 
-    border: 1px solid #fff; 
-    color: #fff;
-}
-.greeting img{
-    float: left;
-    width: 200px;
-    height: auto; 
-     
 }
 .main {
     max-width: 1200px; 
@@ -74,10 +57,7 @@ ul li.active a{ /* This bit makes the home button default option and colors in t
     left: 50%;
     transform: translate(-50%,-50%);
 }
-#message{
-    font-family: 'Times New Roman', Times, serif;
-    background-color: transparent; 
-}
+
 /*p{ background-color: #ff7f50; } added only for assignment*/
 
    
@@ -92,38 +72,48 @@ body{
   width: 100%;
   position: relative;
   display: flex;
+  
 }
 
 .searchTerm {
   width: 200%;
   border-right: none;
   padding: 5px;
-  height: 30px;
+  height: 40px;
   border-radius: 10px;
   outline: none;
   color: #9DBFAF;
 }
 
 .searchTerm:focus{
-  color: gray; 
+  color: black; 
+  font-size: 16px; 
 }
 
 .searchButton {
-  width: 60px;
+  padding: 0%;
+  border: 0ch;
+  width: 80px;
   height: 40px;
-  border-radius: 10px;
-  background:gray;
   text-align: center;
-  color: #fff;
-  cursor: pointer;
+   cursor: pointer;
   font-size: 20px;
-}
+  background:none ;
 
+  
+}
+input{
+  font-size: 16px; 
+}
+i{
+  color: #fff;
+  size:40px;
+}
 /*Resize the wrap to see the search bar change!*/
 .wrap{
-  width: 50%;
+  width: 60%;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -149,8 +139,21 @@ input[type=text]:focus, input[type=password]:focus {
 }
 
 /* Set a style for all buttons */
-button {
-  background-color: #4CAF50;
+.loginb{
+  font-size: 14px;
+  background-color: rgba(128, 128, 128, 0.178);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.signb{
+  font-size: 14px;
+  background-color: rgba(128, 128, 128, 0.178);
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -161,13 +164,18 @@ button {
 }
 
 button:hover {
-  opacity:1;
+  opacity:2;
 }
 
 /* Extra styles for the cancel button */
 .cancelbtn {
   padding: 14px 20px;
   background-color: #f44336;
+}
+
+.signupbtn {
+  padding: 14px 20px;
+  background-color: green;
 }
 
 /* Float cancel and signup buttons and add an equal width */
@@ -191,7 +199,7 @@ button:hover {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: #474e5d;
+  background-color: #474e5d56;
   padding-top: 50px;
 }
 
@@ -231,3 +239,10 @@ hr {
   clear: both;
   display: table;
 }
+
+.feed{
+  height:700px;
+  background-color:rgb(245, 245, 245);
+  color: black;
+  font-size: 30px; 
+} 
