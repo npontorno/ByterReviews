@@ -1,8 +1,8 @@
 export default
 [
     {
-        id: 1111,
-        ownerId: 0002,
+        id: 2222,
+        ownerId: 1112,
         rating: 2.23,
         name: "restaurantName",
         city: "Chapel Hill",
@@ -13,7 +13,7 @@ export default
         items:
         [
             {
-                id: 2221,
+                id: 3331,
                 name: "burger",
                 image: "url",
                 price: "$5.23",
@@ -22,7 +22,7 @@ export default
             },
 
             {
-                id: 2222,
+                id: 3333,
                 name: "cocktail",
                 image: "url",
                 price: "$7.23",
@@ -33,8 +33,8 @@ export default
     },
 
     {
-        id: 1112,
-        ownerId: 0002,
+        id: 2222,
+        ownerId: 1112,
         rating: 3.4,
         name: "restaurantName",
         city: "Chapel Hill",

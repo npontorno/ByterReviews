@@ -1,7 +1,7 @@
-export default
+export let array =
 [
     {
-        id: 0001,
+        id: 1111,
         first: "fname",
         last: "lname",
         email: "address",
@@ -11,8 +11,8 @@ export default
         posts:
         [
             {
-                id: 3331,
-                itemId: 2221,
+                id: 4441,
+                itemId: 3331,
                 body: "some text about restaurant",
                 rating: 5,
                 upvotes: 0,
@@ -20,8 +20,8 @@ export default
             },
 
             {
-                id: 3332,
-                itemId: 2222,
+                id: 4441,
+                itemId: 3331,
                 body: "some more text about a different restaurant",
                 rating: 2,
                 upvotes: 3,
@@ -31,7 +31,7 @@ export default
     },
 
     {
-        id: 0002,
+        id: 1112,
         first: "fname2",
         last: "lname2",
         email: "address2",

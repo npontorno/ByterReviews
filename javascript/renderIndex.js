@@ -1,3 +1,5 @@
+import {array} from "../data/accounts.js";
+
 /*
 //
 // Test Axios Request
@@ -55,19 +57,63 @@ export const renderPost = function(post)
 
     return format;
 };
+*/
 
 //
 // Button Press Handlers
 //
-export const handleLikeButtonPress = function(event, postData)
+export const createAccount = async function()
 {  
-    let post = postData.filter(x => x.id == event.id)[0];
+    let account = {};
+    let fname = $('#id01 .fname').val();
+    let lname = $('#id01 .lname').val();
+    let email = $('#id01 .email').val();
+    let pass1 = $('#id01 .psw').val();
+    let pass2 = $('#id01 .psw-repeat').val();
 
-    like(post.id);
+    if ((fname == "") || (lname == "") || (email == "") || (pass1 == "") || (pass2 == ""))
+    {
+        console.log("You must fill out the entire form.");
+        return;
+    }
+
+    if ((!email.includes("@")) || (!email.includes(".")))
+    {
+        console.log("Make sure your email is formatted correctly.");
+        return;
+    }
+
+    if (pass1.length < 6)
+    {
+        console.log("Passwords must have a length of atleast 6 characters.");
+        return;
+    }
+
+    if (pass1 != pass2)
+    {
+        console.log("Passwords do not match.");
+        return;
+    }
+
+    account = 
+    {
+        id: 1111,
+        first: fname,
+        last: lname,
+        email: email,
+        password: pass1,
+        isOwner: false,
+        postCount: 0,
+        posts: []
+    };
+
+    console.log(account);
+    await array.push(account);
+    console.log(array);
     return;
 };
 
-
+/*
 //
 // Appends each selected post into the DOM
 //
@@ -78,21 +124,15 @@ export const loadPostsIntoDOM = function(posts) {
     posts.forEach(x => {post += renderPost(x)});
     $root.html(post);
 };
+*/
 
 //
 // Main function to be executed upon page loading
 //
-
 $(async function()
 {
-    let postData = await index();
-    loadPostsIntoDOM(postData);
-
-    $(document).on("click", ".class", function()
+    $(document).on("click", "#id01 .signupbtn", function()
     {
-        handleLikeButtonPress(this, postData);
+        createAccount();
     })
-
-    await index();
 });
-*/
