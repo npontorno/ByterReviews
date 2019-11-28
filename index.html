@@ -16,7 +16,7 @@
 
         <header>
             <div class = "main"> 
-                <button onclick="document.getElementById('id03').style.display='block'" style="width:auto; " class= "loginb">Explore</button>
+                <button onclick="document.getElementById('id03').style.display='block'" class= "loginb"><a href="./html/explore.html">Explore</a></button>
                 <button onclick="document.getElementById('id04').style.display='block'" style="width:auto; " class= "loginb">Write a Review <i class = "fa fa-pencil"></i></button>
                 <ul>
                     <li class="active"><a href="index.html"></a></li>
@@ -114,7 +114,7 @@ window.onclick = function(event) {
 
 <div id="id02" class="modal">
         <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-        <form class="modal-content" action="/action_page.php">
+        <form class="modal-content" action="/html/UserPage.html">
           <div class="container">
             <h1><center>Login</center></h1>
             <!--- <p>Don't Have an Account? <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button></p>--->
@@ -149,6 +149,18 @@ window.onclick = function(event) {
         }
       }
       </script>
+
+<script>
+    // Get the modal
+    var exp = document.getElementById('id03');
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modals) {
+        modal.sstyle.display = "none";
+      }
+    }
+    </script>
 
         </header>
 
