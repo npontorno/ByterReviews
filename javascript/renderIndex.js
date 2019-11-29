@@ -17,45 +17,22 @@ export async function index()
     console.log(result.data);
     return;
 };
+*/
 
 //
 // Axios Functions
 //
-export async function index()
+export async function postAccount(account)
 {
     const result = await axios({
-        method: 'get',
-        url: 'https://comp426fa19.cs.unc.edu/a09/tweets',
-        withCredentials: true,
+        method: 'post',
+        url: 'http://localhost:3002/accounts',
+        headers: {'Content-Type': 'application/json'},
+        data: account
     })
 
-    return result.data;
-};
-
-export async function like(id)
-{
-    const result = await axios({
-        method: 'put',
-        url: 'https://comp426fa19.cs.unc.edu/a09/tweets/' + id + '/like',
-        withCredentials: true,
-    })
-
-    location.reload();
     return;
 };
-
-//
-// Template for loading each post
-//
-export const renderPost = function(post)
-{
-    let format =
-        `<div id = "${post.id}" class = "obj">
-        </div>`
-
-    return format;
-};
-*/
 
 //
 // Button Press Handlers
@@ -105,11 +82,23 @@ export const createAccount = async function()
         posts: []
     };
 
-    console.log(account);
+    postAccount(account);
     return;
 };
 
 /*
+//
+// Template for loading each post
+//
+export const renderPost = function(post)
+{
+    let format =
+        `<div id = "${post.id}" class = "obj">
+        </div>`
+
+    return format;
+};
+
 //
 // Appends each selected post into the DOM
 //

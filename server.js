@@ -1,14 +1,48 @@
-const http = require('http');
+const express = require("express");
+const fs = require("fs");
+const path = require("path");
+const cors = require("cors");
+const bodyParser = require("body-parser");
 
-// Create an instance of the http server to handle HTTP requests
-let app = http.createServer((req, res) => {
-    // Set a response type of plain text for the response
-    res.writeHead(200, {'Content-Type': 'text/plain'});
+//
+// Read JSON Files
+//
+let accounts = JSON.parse(fs.readFileSync(path.resolve(__dirname, "./data/accounts.json")));
+let restaurants = JSON.parse(fs.readFileSync(path.resolve(__dirname, "./data/restaurants.json")));
 
-    // Send back a response and end the connection
-    res.end('Hello World!\n');
-});
+//
+// Initialize Server And Related Packages
+//
+let app = express();
+let server = app.listen(3002, console.log("The server is listening on port 3002."));
+app.use(express.static("client"));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}))
+app.use(cors());
 
-// Start the server on port 3000
-app.listen(3002, '127.0.0.1');
-console.log('Node server running on port 3002');
+//
+// Handle Methods From Client
+//
+app.get("/accounts", getAccounts);
+app.get("/restaurants", getRestaurants);
+app.post("/accounts", postAccount);
+
+//
+// Handler Callback Functions
+//
+function getAccounts(request, response)
+{
+    response.send(accounts);
+}
+
+function getRestaurants(request, response)
+{
+    response.send(restaurants);
+}
+
+function postAccount(request, response)
+{
+    let account = request.body;
+    accounts.push(account);
+    fs.writeFile(path.resolve(__dirname, "./data/accounts.json"), JSON.stringify(accounts, null, 2), () => {console.log("Wrote new account.")});
+}
