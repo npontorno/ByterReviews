@@ -44,6 +44,16 @@ export async function getEmails()
     return result.data;
 };
 
+export async function getAccounts()
+{
+    const result = await axios({
+        method: 'get',
+        url: 'http://localhost:3002/accounts',
+    })
+
+    return result.data;
+};
+
 //
 // Button Press Handlers
 //
@@ -105,6 +115,40 @@ export const createAccount = async function()
     return;
 };
 
+export const login1 = async function()
+{
+    let email = $('#emailL').val();
+    let pass = $('#pswL').val();
+
+    await getAccounts().then(accounts => login2(accounts, email, pass))//.catch(()=>{console.log("error")});
+    return;
+};
+
+export const login2 = async function(accounts, email, pass)
+{
+    let loggedIn = false;
+
+    for (let i = 0; i < accounts.length; i++)
+    {
+        if ((accounts[i].email == email) && (accounts[i].password == pass))
+        {
+            loggedIn = true;
+        }
+    }
+
+    if (loggedIn)
+    {
+        localStorage.setItem('loggedIn', true);
+        return;
+    }
+
+    else
+    {
+        localStorage.setItem('loggedIn', false);
+        return;
+    }
+};
+
 /*
 //
 // Template for loading each post
@@ -138,5 +182,10 @@ $(async function()
     $(document).on("click", "#id01 .signupbtn", function()
     {
         createAccount();
+    })
+
+    $(document).on("click", "#id02 .signupbtn", function()
+    {
+        login1();
     })
 });
