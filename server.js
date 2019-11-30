@@ -25,6 +25,7 @@ app.use(cors());
 //
 app.get("/accounts", getAccounts);
 app.get("/restaurants", getRestaurants);
+app.get("/emails", getEmails);
 app.post("/accounts", postAccount);
 
 //
@@ -33,16 +34,34 @@ app.post("/accounts", postAccount);
 function getAccounts(request, response)
 {
     response.send(accounts);
+    return;
 }
 
 function getRestaurants(request, response)
 {
     response.send(restaurants);
+    return;
 }
+
+function getEmails(request, response)
+{
+    let emails = [];
+
+    for (i in accounts)
+    {
+        emails.push(accounts[i].email);
+    }
+
+    response.send(emails);
+    return;
+}
+
 
 function postAccount(request, response)
 {
     let account = request.body;
+    
     accounts.push(account);
     fs.writeFile(path.resolve(__dirname, "./data/accounts.json"), JSON.stringify(accounts, null, 2), () => {console.log("Wrote new account.")});
+    return;
 }

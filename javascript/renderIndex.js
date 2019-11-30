@@ -34,17 +34,36 @@ export async function postAccount(account)
     return;
 };
 
+export async function getEmails()
+{
+    const result = await axios({
+        method: 'get',
+        url: 'http://localhost:3002/emails',
+    })
+
+    return result.data;
+};
+
 //
 // Button Press Handlers
 //
 export const createAccount = async function()
-{  
+{
     let account = {};
     let fname = $('#fname').val();
     let lname = $('#lname').val();
     let email = $('#emailS').val();
     let pass1 = $('#pswS').val();
     let pass2 = $('#rpswS').val();
+    let id = Date.now();
+
+    /*let emails = getEmails();
+
+    if (emails.includes(email))
+    {
+        console.log("Email address already exists.");
+        return;
+    }*/
 
     if ((fname == "") || (lname == "") || (email == "") || (pass1 == "") || (pass2 == ""))
     {
@@ -69,10 +88,10 @@ export const createAccount = async function()
         console.log("Passwords do not match.");
         return;
     }
-
+    
     account = 
     {
-        id: 1111,
+        id: id,
         first: fname,
         last: lname,
         email: email,
