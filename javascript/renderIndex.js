@@ -65,7 +65,7 @@ export const createAccount = async function()
     let email = $('#emailS').val();
     let pass1 = $('#pswS').val();
     let pass2 = $('#rpswS').val();
-    let id = Date.now();
+    let id = parseInt(111 + "" + Date.now());
 
     /*let emails = getEmails();
 
@@ -138,8 +138,6 @@ export const login2 = async function(accounts, email, pass)
         }
     }
 
-    console.log("ahh")
-    console.log(loggedIn.toString())
     if (loggedIn)
     {
         localStorage.setItem("loggedIn", true);
@@ -151,7 +149,6 @@ export const login2 = async function(accounts, email, pass)
     else
     {
         localStorage.setItem("loggedIn", false);
-        console.log(localStorage.getItem("loggedIn").toString());
         alert("Login failed");
         return;
     }
