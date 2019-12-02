@@ -1,24 +1,3 @@
-/*
-//
-// Test Axios Request
-//
-export async function index()
-{
-    const result = await axios({
-        method: 'get',
-        url: 'https://developers.zomato.com/api/v2.1/cities?q=new%20york',
-        headers:
-        {
-            'user-key': 'ffa399745f3e1bfe2aff527fad6794f9',
-            'content-type': 'application/json'
-        },
-    })
-
-    console.log(result.data);
-    return;
-};
-*/
-
 //
 // Axios Functions
 //
@@ -77,25 +56,25 @@ export const createAccount = async function()
 
     if ((fname == "") || (lname == "") || (email == "") || (pass1 == "") || (pass2 == ""))
     {
-        console.log("You must fill out the entire form.");
+        alert("You must fill out the entire form.");
         return;
     }
 
     if ((!email.includes("@")) || (!email.includes(".")))
     {
-        console.log("Make sure your email is formatted correctly.");
+        alert("Make sure your email is formatted correctly.");
         return;
     }
 
     if (pass1.length < 6)
     {
-        console.log("Passwords must have a length of atleast 6 characters.");
+        alert("Passwords must have a length of atleast 6 characters.");
         return;
     }
 
     if (pass1 != pass2)
     {
-        console.log("Passwords do not match.");
+        alert("Passwords do not match.");
         return;
     }
     
@@ -138,13 +117,12 @@ export const login2 = async function(accounts, email, pass)
         }
     }
 
-    console.log("ahh")
-    console.log(loggedIn.toString())
     if (loggedIn)
     {
         localStorage.setItem("loggedIn", true);
         localStorage.setItem("account", account);
-        window.location.href = "http://localhost:3000//html/UserPage.html";
+        window.location.href = "http://localhost:3000//html/loginindex.html";
+        alert("Successfully logged in!");
         return;
     }
 
@@ -155,31 +133,6 @@ export const login2 = async function(accounts, email, pass)
         return;
     }
 };
-
-/*
-//
-// Template for loading each post
-//
-export const renderPost = function(post)
-{
-    let format =
-        `<div id = "${post.id}" class = "obj">
-        </div>`
-
-    return format;
-};
-
-//
-// Appends each selected post into the DOM
-//
-export const loadPostsIntoDOM = function(posts) {
-    let post = "";
-    const $root = $("#root");
-
-    posts.forEach(x => {post += renderPost(x)});
-    $root.html(post);
-};
-*/
 
 //
 // Main function to be executed upon page loading
