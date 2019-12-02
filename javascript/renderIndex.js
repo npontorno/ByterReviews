@@ -151,10 +151,6 @@ export const login2 = async function(accounts, email, pass)
     else
     {
         localStorage.setItem("loggedIn", false);
-<<<<<<< HEAD
-        console.log(localStorage.getItem("loggedIn").toString());
-=======
->>>>>>> ec1ef8a77a10b34b63fa22ad954ea603d1bcaf07
         alert("Login failed");
         return;
     }
