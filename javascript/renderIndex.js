@@ -120,31 +120,39 @@ export const login1 = async function()
     let email = $('#emailL').val();
     let pass = $('#pswL').val();
 
-    await getAccounts().then(accounts => login2(accounts, email, pass))//.catch(()=>{console.log("error")});
+    await getAccounts().then(accounts => login2(accounts, email, pass));
     return;
 };
 
 export const login2 = async function(accounts, email, pass)
 {
     let loggedIn = false;
+    let account = {};
 
     for (let i = 0; i < accounts.length; i++)
     {
         if ((accounts[i].email == email) && (accounts[i].password == pass))
         {
             loggedIn = true;
+            account = JSON.stringify(accounts[i]);
         }
     }
 
+    console.log("ahh")
+    console.log(loggedIn.toString())
     if (loggedIn)
     {
-        localStorage.setItem('loggedIn', true);
+        localStorage.setItem("loggedIn", true);
+        localStorage.setItem("account", account);
+        window.location.href = "http://localhost:3000//html/UserPage.html";
         return;
     }
 
     else
     {
-        localStorage.setItem('loggedIn', false);
+        localStorage.setItem("loggedIn", false);
+        console.log(localStorage.getItem("loggedIn").toString());
+        alert("Login failed");
         return;
     }
 };
