@@ -22,6 +22,6 @@ $(async function()
 
     else
     {
-        alert("Not logged in!")
+        alert("Not logged in!");
     }
 });

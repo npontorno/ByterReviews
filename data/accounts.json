@@ -1,6 +1,6 @@
 [
   {
-    "id": 1111575301739181,
+    "id": 1111575318003495,
     "first": "a",
     "last": "a",
     "email": "a@a.a",
@@ -8,52 +8,5 @@
     "isOwner": false,
     "postCount": 0,
     "posts": []
-  },
-  {
-<<<<<<< HEAD
-    "id": 1575297890562,
-    "first": "a",
-    "last": "a",
-    "email": "a@a.a",
-    "password": "aaaaaa",
-    "isOwner": false,
-    "postCount": 0,
-    "posts": []
-  },
-  {
-    "id": 1575297899868,
-    "first": "a",
-    "last": "a",
-    "email": "a@a.a",
-    "password": "aaaaaa",
-    "isOwner": false,
-    "postCount": 0,
-    "posts": []
-  },
-  {
-    "id": 1575298285871,
-=======
-    "id": 1111575302960945,
->>>>>>> ec1ef8a77a10b34b63fa22ad954ea603d1bcaf07
-    "first": "b",
-    "last": "b",
-    "email": "b@b.b",
-    "password": "bbbbbb",
-    "isOwner": false,
-    "postCount": 0,
-    "posts": []
-<<<<<<< HEAD
-  },
-  {
-    "id": 1575299263316,
-    "first": "r",
-    "last": "r",
-    "email": "r@r.r",
-    "password": "rrrrrr",
-    "isOwner": false,
-    "postCount": 0,
-    "posts": []
-=======
->>>>>>> ec1ef8a77a10b34b63fa22ad954ea603d1bcaf07
   }
 ]
