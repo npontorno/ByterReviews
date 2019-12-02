@@ -7,7 +7,7 @@
         <title>Final Project</title>
 
         <!-- Include links to CSS stylesheets below -->
-        <link rel="stylesheet" type="text/css" href="./css/style.css">
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
     </head>
 
@@ -21,8 +21,8 @@
                     <li class="active"><a href="index.html"></a></li>
 
                     
-                    <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;" class= "loginb">Login</button>
-                    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class= "signb">Sign Up</button>
+                    <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;" class= "loginb">Logout</button>
+                    <a href="./UserPage.html">My Account</a>
                     <!-- <li><a href="signup.html">Sign Up</a></li> Lead to Form page -->
                 </ul>
 
@@ -46,7 +46,7 @@
   <div class="w3-row-padding w3-padding-16 w3-center">
       <div class="w3-quarter">
         <div class = "food">
-        <img src="./Images/IMG_33.jpg" alt="Sandwich" style="width:100%">
+        <img src="../Images/IMG_33.jpg" alt="pics" style="width:100%">
         <h3>Menu Item</h3>
         <p>Description</p>
       </div>
@@ -60,41 +60,7 @@
                
             </div>
            
-<!-- SIGN UP POP UP-->
-<div id="id01" class="modal">
-  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-  <form class="modal-content">
-    <div class="container">
-      <h1><center>Sign Up</center></h1>
-      <p><center>Please fill in this form to create an account.</center></p>
-      <hr>
-      <label for="fname"><b>First Name</b></label>
-      <input type="text" placeholder="" name="fname" id = "fname" required>
-      <label for="lname"><b>Last Name</b></label>
-      <input type="text" placeholder="" name="lname"  id = "lname" required>
 
-      <label for="email"><b>Email</b></label>
-      <input type="text" placeholder="Enter Email" name="email" id = "emailS"required>
-
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" id="pswS" required>
-
-      <label for="psw-repeat"><b>Repeat Password</b></label>
-      <input type="password" placeholder="Repeat Password" name="psw-repeat" id = "rpswS" required>
-      
-      <label>
-        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px" id = "rem"> Remember me
-      </label>
-
-      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-
-      <div class="clearfix">
-        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-        <button type="submit" class="signupbtn">Sign Up</button>
-      </div>
-    </div>
- </form>
-</div>
 
 <script>
 // Get the modal
@@ -109,33 +75,7 @@ window.onclick = function(event) {
 </script>
 
 
-<!-- LOGIN POP UP-->
 
-<div id="id02" class="modal">
-        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-        <form class="modal-content">
-          <div class="container">
-            <h1><center>Login</center></h1>
-            <!--- <p>Don't Have an Account? <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button></p>--->
-            <hr>
-            <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="email" id = "emailL">
-      
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" id = "pswL">
-            
-            <label>
-              <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-            </label>
-      
-
-            
-            <div class="clearfix">
-            <button type="submit" class="signupbtn">Login</button>
-            </div>
-          </div>
-        </form>
-      </div>
       
       <script>
       // Get the modal
