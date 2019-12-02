@@ -8,6 +8,7 @@
 
 <!--- All the styling I need to edit colors etc and make this into a css file rather than links-->
 <link rel="stylesheet" type="text/css" href="../css/style.css">
+<link rel="stylesheet" type="text/css" href="../css/profile.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
@@ -50,10 +51,22 @@
       </div>
 
       <!--- End of NAV and Sign out Menu -->
-      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white"
-        title="My Account">
-        <i class="fa fa-user"></i>
-      </a>
+      <a href="#" 
+        title="My Account"> </a>
+
+        <!--- <div class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white">---->
+          
+          <div class="w3-dropdown-hover w3-hide-small" style = "float:right">
+            <button class="w3-button w3-padding-large"><i class="fa fa-user"></i><span class="w3-badge w3-right w3-small w3-green"></span></button>     
+            <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
+              <a href="./EditProfile.html" class="w3-bar-item w3-button">Edit Profile</a>
+              <a href="#" class="w3-bar-item w3-button" id = "logout">Logout</a>
+              
+            </div>
+          </div>
+
+        
+      
     </div>
   </div>
 
@@ -123,15 +136,7 @@
         </div>-->
         <br>
         
-        <!-- Alert Box -->
-        <div
-          class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small">
-          <span onclick="this.parentElement.style.display='none'" class="w3-button w3-theme-l3 w3-display-topright">
-            <i class="fa fa-remove"></i>
-          </span>
-          <p><strong>Hey!</strong></p>
-          <p></p>
-        </div>
+  
 
         <!-- End Left Column -->
       </div>
