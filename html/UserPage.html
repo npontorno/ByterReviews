@@ -102,10 +102,16 @@
               <div class="container">
                 <h1 style = "color:black"><center>Edit</center></h1>
                 <hr>
-                <label for="fname" style = "color:black"><b>First Name</b></label>
-                <input type="text" placeholder="" name="fname" id = "fname">
-                <label for="lname" style = "color:black"><b>Last Name</b></label>
-                <input type="text" placeholder="" name="lname"  id = "lname">
+                <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
+<p><label for="file" style="cursor: pointer; color:blue">Edit Profile Image</label></p>
+<p><img id="output" width="200" /></p>
+
+<script>
+var loadFile = function(event) {
+	var image = document.getElementById('output');
+	image.src = URL.createObjectURL(event.target.files[0]);
+};
+</script>
           
                 <label for="psw" style = "color:black"><b>New Password</b></label>
                 <input type="password" placeholder="Enter Password" name="psw" id="pswS">
