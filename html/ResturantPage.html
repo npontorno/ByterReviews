@@ -1,202 +1,284 @@
+
 <!DOCTYPE html>
 <html>
-<title></title>
+<title>Profile</title>
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--- All the styling I need to edit colors etc and make this into a css file rather than links-->
 <link rel="stylesheet" type="text/css" href="../css/profile.css">
+
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<style>
-html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
+<!--Common Font-->
+<style> 
+  html,
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: "Open Sans", sans-serif
+  }
 </style>
+
+
 <body class="w3-theme-l5">
 
-<!-- Navbar -->
-<div class="w3-top">
- <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
-  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Insert Company Logo</a>
-  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i class="fa fa-globe"></i></a>
-  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings"><i class="fa fa-user"></i></a>
-  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
-  <div class="w3-dropdown-hover w3-hide-small">
-    <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">3</span></button>     
-    <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
-      <!--- <a href="#" class="w3-bar-item w3-button">One new friend request</a>
-      <a href="#" class="w3-bar-item w3-button">John Doe posted on your wall</a>
-      <a href="#" class="w3-bar-item w3-button">Jane likes your post</a> --->
-    </div>
-  </div>
-  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
-    <img src="/w3images/avatar2.png" class="w3-circle" style="height:23px;width:23px" alt="Avatar">
-  </a>
- </div>
-</div>
+  <!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+      
+      <!-- If On smaller screens 
+      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2"
+        href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>-->
 
-<!-- Navbar on small screens -->
-<div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
-  <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large">Resturant Name</a>
-</div>
+        <!--- Start NAV-->
+      <a href= "../index.html" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fas fa-drumstick-bite"></i> Byter</a> <!--- this will take person back to explore page-->
 
-<!-- Page Container -->
-<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">    
-  <!-- The Grid -->
-  <div class="w3-row">
-    <!-- Left Column -->
-    <div class="w3-col m3">
-      <!-- Profile -->
-      <div class="w3-card w3-round w3-white">
-        <div class="w3-container">
-         <h4 class="w3-center">Resturant Name</h4>
-         <p class="w3-center"><img src="/w3images/avatar3.png" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
-         <hr>
-         <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> Address: </p>
-         <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> Phone: </p>
-         <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i>Overall Rating: </p>
+      <div class="w3-dropdown-hover w3-hide-small">
+        <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span
+            class="w3-badge w3-right w3-small w3-green"> <!--Insert Notification Number?--></span></button>
+        <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
+          <!--- <a href="#" class="w3-bar-item w3-button">One new friend request</a> Notification Skeleton--->
         </div>
       </div>
-      <br>
-      
-      <!-- Accordion -->
-      <div class="w3-card w3-round">
-        <div class="w3-white">
-          <div id="Demo1" class="w3-hide w3-container">
-            <p>Some text..</p>
-          </div>
-          <div id="Demo2" class="w3-hide w3-container">
-            <p>Some other text..</p>
-          </div>
-          <div id="Demo3" class="w3-hide w3-container">
-         <div class="w3-row-padding">
-         <br>
-           <div class="w3-half">
-             <img src="/w3images/lights.jpg" style="width:100%" class="w3-margin-bottom">
-           </div>
-           <div class="w3-half">
-             <img src="/w3images/nature.jpg" style="width:100%" class="w3-margin-bottom">
-           </div>
-           <div class="w3-half">
-             <img src="/w3images/mountains.jpg" style="width:100%" class="w3-margin-bottom">
-           </div>
-           <div class="w3-half">
-             <img src="/w3images/forest.jpg" style="width:100%" class="w3-margin-bottom">
-           </div>
-           <div class="w3-half">
-             <img src="/w3images/nature.jpg" style="width:100%" class="w3-margin-bottom">
-           </div>
-           <div class="w3-half">
-             <img src="/w3images/snow.jpg" style="width:100%" class="w3-margin-bottom">
-           </div>
-         </div>
-          </div>
-        </div>      
-      </div>
-      <br>
-      
-      <!-- Alert Box -->
-      <div class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small">
-        <span onclick="this.parentElement.style.display='none'" class="w3-button w3-theme-l3 w3-display-topright">
-          <i class="fa fa-remove"></i>
-        </span>
-        <p><strong>Hey!</strong></p>
-        <p>People are looking at your profile. Find out who.</p>
-      </div>
-    
-    <!-- End Left Column -->
-    </div>
-    
-    <!-- Middle Column -->
-    <div class="w3-col m7">
-    
-      <div class="w3-row-padding">
-        <div class="w3-col m12">
-          <div class="w3-card w3-round w3-white">
-            <div class="w3-container w3-padding">
-              <h6 class="w3-opacity">Review a Menu Item: </h6>
-              <p contenteditable="true" class="w3-border w3-padding"></p>
-              <button type="button" class="w3-button w3-theme"><i class="fa fa-pencil"></i>  Post</button> 
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      
-      <!---RENDER DISPLAY FOOD REVIEWS This is the generic div for display posts-->
-      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-        <img src="" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
-        <span class="w3-right w3-opacity">TimeStamp</span>
-        <h4>INSERT NAME</h4><br>
-        <hr class="w3-clear">
-        <p></p>
-          <div class="w3-row-padding" style="margin:0 -16px">
-            <div class="w3-half">
-              <img src="" style="width:100%" alt="" class="w3-margin-bottom">
-            </div>
-            <div class="w3-half">
-              <img src="" style="width:100%" alt="" class="w3-margin-bottom">
-          </div>
-        </div>
-        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
-        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
-      </div>
-      
-
-      
-      
-    <!-- End Middle Column -->
-    </div>
-    
-    <!-- Right Column -->
-    <div class="w3-col m2">
-      <div class="w3-card w3-round w3-white w3-center">
-        <div class="w3-container">
-          <p>Check out simiar cusines: </p>
-          <img src="" alt="" style="width:100%;">
-        </div>
-      </div>
-      <br>
-      
+      <!--- End of NAV and Sign out Menu -->
      
-    <!-- End Right Column -->
+
+        <!--- <div class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white">---->
+          
+          <div class="w3-dropdown-hover w3-hide-small" >
+            <button class="w3-button w3-padding-large" ><i class="fa fa-user"></i><span class="w3-badge w3-right w3-small w3-green"></span></button>     
+            <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
+              
+              
+            </div>
+          </div>
+
+        
+      
     </div>
-    
-  <!-- End Grid -->
   </div>
-  
-<!-- End Page Container -->
+
+  <!-- Navbar on small screens STILL NEED TO TEST SMALL SCREENS
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">My Profile</a>
+  </div>  -->
+
+  <!-- Page Container -->
+  <div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">
+    <!-- The Grid -->
+    <div class="w3-row">
+      <!-- Left Column -->
+      <div class="w3-col m3">
+        <!-- Profile -->
+        <div class="w3-card w3-round w3-white">
+          <div class="w3-container">
+            <h4 class="w3-center" id = "profile" >Restaurant Name</h4> <!--- Insert First Name, Last Name-->
+            <p class="w3-center">
+              
+              <!---<img src="/w3images/avatar3.png" class="w3-circle" style="height:106px;width:106px"
+                alt="Avatar"></p> for profile image--->
+            <hr>
+            <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme" id = "pemail"></i></p>
+            <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme" id = "numOfReviews"></i></p>
+            <!--- <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> April 1, 1988</p> --->
+          </div>
+        </div>
+        <br>
+          
+
+        <!-- End Left Column -->
+      </div>
+
+      <!-- Middle Column -->
+      <div class="w3-col m7">
+
+        <div class="w3-row-padding">
+          <div class="w3-col m12">
+            <div class="w3-card w3-round w3-white">
+              <div class="w3-container w3-padding">
+                <h5 class="w3-opacity">Menu Items</h5>
+<div id="btnContainer">
+  <button class="btn" onclick="listView()"><i class="fa fa-bars"></i> List</button> 
+  <button class="btn active" onclick="gridView()"><i class="fa fa-th-large"></i> Grid</button>
 </div>
 <br>
- 
+
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <a href="Foodpage.html" >Example Item</a>
+    <p></p>
+  </div>
+  <div class="column" style="background-color:#bbb;">
+      <a href="#" >Example Item</a>
+    <p></p>
+  </div>
+
+</div>
+
+<div class="row">
+  <div class="column" style="background-color:#ccc;">
+      <a href="#" >Example Item</a>
+    <p></p>
+  </div>
+  <div class="column" style="background-color:white">
+      <button onclick="document.getElementById('addform').style.display='block'" style="width:auto; color:black;">Add Item</button>
+     
+
+    <p></p>
+  </div>
+</div>
+
 <script>
-// Accordion
-function myFunction(id) {
-  var x = document.getElementById(id);
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-    x.previousElementSibling.className += " w3-theme-d1";
-  } else { 
-    x.className = x.className.replace("w3-show", "");
-    x.previousElementSibling.className = 
-    x.previousElementSibling.className.replace(" w3-theme-d1", "");
+// Get the elements with class="column"
+var elements = document.getElementsByClassName("column");
+
+// Declare a loop variable
+var i;
+
+// List View
+function listView() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.width = "100%";
   }
 }
 
-// Used to toggle the menu on smaller screens when clicking on the menu button
-function openNav() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
+// Grid View
+function gridView() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.width = "50%";
   }
+}
+
+/* Optional: Add active class to the current button (highlight it) */
+var container = document.getElementById("btnContainer");
+var btns = container.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
 }
 </script>
+              </div>
+            </div>
+          </div>
+        </div>
 
+
+        <!-- End Middle Column -->
+      </div>
+
+      <!-- Right Column -->
+      <div class="w3-col m2">
+        <div class="w3-card w3-round w3-white w3-center">
+          <div class="w3-container">
+
+          </div>
+        </div>
+        <br>
+
+        <div class="w3-card w3-round w3-white w3-center">
+          <div class="w3-container">
+            <div class="w3-row w3-opacity">
+              <div class="w3-half">
+               
+              </div>
+               Checkout Similar Places: 
+            </div>
+          </div>
+        </div>
+        <br>
+
+       
+        <br>
+
+       
+
+        <!-- End Right Column -->
+      </div>
+
+      <!-- End Grid -->
+    </div>
+
+    <!-- End Page Container -->
+  </div>
+  <br>
+
+  <!-- Footer -->
+
+  <script>
+    // Accordion
+    function myFunction(id) {
+      var x = document.getElementById(id);
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.previousElementSibling.className += " w3-theme-d1";
+      } else {
+        x.className = x.className.replace("w3-show", "");
+        x.previousElementSibling.className =
+          x.previousElementSibling.className.replace(" w3-theme-d1", "");
+      }
+    }
+
+    // Used to toggle the menu on smaller screens when clicking on the menu button
+    // function openNav() {
+    //   var x = document.getElementById("navDemo");
+    //   if (x.className.indexOf("w3-show") == -1) {
+    //     x.className += " w3-show";
+    //   } else {
+    //     x.className = x.className.replace(" w3-show", "");
+    //   }
+    // }
+
+
+  </script>
+
+
+
+<div id="addform" class="modal">
+    <span onclick="document.getElementById('addform').style.display='none'" class="close" title="Close Modal">&times;</span>
+    <form class="modal-content">
+      <div class="container">
+        <h1 style = "color:black;"><center>Add Item</center></h1>
+        <hr>
+        <label for="fname" style = "color:black;"><b>Name as it appears on the Menu: </b></label>
+        <input type="text" placeholder="" name="fname" id = "fname" required>
+  
+        <div class="clearfix">
+          <button type="button" onclick="document.getElementById('addform').style.display='none'" class="cancelbtn">Cancel</button>
+          <button type="submit" class="signupbtn">Add</button>
+        </div>
+      </div>
+   </form>
+  </div>
+  
+  <script>
+  // Get the modal
+  var modal = document.getElementById('addform');
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
+  
+  <!-- Include links to JavaScript files below -->
+  <script src="https://kit.fontawesome.com/c7070aa968.js" crossorigin="anonymous"></script>
+  <script src="../node_modules/axios/dist/axios.js"></script>
+  <script src="../node_modules/jquery/dist/jquery.js"></script>
+  <script src="../javascript/renderUserPage.js" type="module"></script>
 </body>
-</html> 
+
+</html>
