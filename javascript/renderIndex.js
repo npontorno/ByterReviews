@@ -107,7 +107,7 @@ export const login1 = async function()
 export const login2 = async function(accounts, email, pass)
 {
     let loggedIn = false;
-    let account = {};
+    let account = JSON.stringify({});
 
     for (let i = 0; i < accounts.length; i++)
     {
@@ -130,7 +130,7 @@ export const login2 = async function(accounts, email, pass)
     else
     {
         localStorage.setItem("loggedIn", false);
-        localStorage.setItem("account", {});
+        localStorage.setItem("account", JSON.stringify({}));
         alert("Login failed");
         return;
     }

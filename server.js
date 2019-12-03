@@ -27,6 +27,7 @@ app.get("/accounts", getAccounts);
 app.get("/restaurants", getRestaurants);
 app.get("/emails", getEmails);
 app.post("/accounts", postAccount);
+app.put("/accounts", updateAccount);
 
 //
 // Handler Callback Functions
@@ -63,5 +64,22 @@ function postAccount(request, response)
     
     accounts.push(account);
     fs.writeFile(path.resolve(__dirname, "./data/accounts.json"), JSON.stringify(accounts, null, 2), () => {console.log("Wrote new account.")});
+    return;
+}
+
+function updateAccount(request, response)
+{
+    let account = request.body;
+
+    for (i in accounts)
+    {
+        if (accounts[i].id == account.id)
+        {
+            accounts[i] = account;
+            fs.writeFile(path.resolve(__dirname, "./data/accounts.json"), JSON.stringify(accounts, null, 2), () => {console.log("Updated account.")});
+            return;
+        }
+    }
+
     return;
 }
