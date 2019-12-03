@@ -7,10 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!--- All the styling I need to edit colors etc and make this into a css file rather than links-->
-<link rel="stylesheet" type="text/css" href="../css/style.css">
 <link rel="stylesheet" type="text/css" href="../css/profile.css">
+
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -39,8 +38,7 @@
         href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>-->
 
         <!--- Start NAV-->
-      <a href="explore.html" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i
-          class="fa fa-home w3-margin-right"></i>Logo</a> <!--- this will take person back to explore page-->
+      <a href= "../index.html" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fas fa-drumstick-bite"></i> Byter</a> <!--- this will take person back to explore page-->
 
       <div class="w3-dropdown-hover w3-hide-small">
         <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span
@@ -49,17 +47,15 @@
           <!--- <a href="#" class="w3-bar-item w3-button">One new friend request</a> Notification Skeleton--->
         </div>
       </div>
-
       <!--- End of NAV and Sign out Menu -->
-      <a href="#" 
-        title="My Account"> </a>
+     
 
         <!--- <div class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white">---->
           
-          <div class="w3-dropdown-hover w3-hide-small" style = "float:right">
-            <button class="w3-button w3-padding-large"><i class="fa fa-user"></i><span class="w3-badge w3-right w3-small w3-green"></span></button>     
+          <div class="w3-dropdown-hover w3-hide-small" >
+            <button class="w3-button w3-padding-large" ><i class="fa fa-user"></i><span class="w3-badge w3-right w3-small w3-green"></span></button>     
             <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
-              <a href="./EditProfile.html" class="w3-bar-item w3-button">Edit Profile</a>
+              <a onclick="document.getElementById('editform').style.display='block'" style="width:auto;" class="w3-bar-item w3-button">Edit Profile</a>
               <a href="#" class="w3-bar-item w3-button" id = "logout">Logout</a>
               
             </div>
@@ -100,41 +96,34 @@
         </div>
         <br>
 
-        <!-- Accordion ADD LATER WHEN WE HAVE ACCOUNT STUFF RUNNING
-      <div class="w3-card w3-round">
-          <div class="w3-white">
-            <div id="Demo1" class="w3-hide w3-container">
-              <p>Some text..</p>
-            </div>
-            <div id="Demo2" class="w3-hide w3-container">
-              <p>Some other text..</p>
-            </div>
-            <div id="Demo3" class="w3-hide w3-container">
-           <div class="w3-row-padding">
-           <br>
-             <div class="w3-half">
-               <img src="/w3images/lights.jpg" style="width:100%" class="w3-margin-bottom">
-             </div>
-             <div class="w3-half">
-               <img src="/w3images/nature.jpg" style="width:100%" class="w3-margin-bottom">
-             </div>
-             <div class="w3-half">
-               <img src="/w3images/mountains.jpg" style="width:100%" class="w3-margin-bottom">
-             </div>
-             <div class="w3-half">
-               <img src="/w3images/forest.jpg" style="width:100%" class="w3-margin-bottom">
-             </div>
-             <div class="w3-half">
-               <img src="/w3images/nature.jpg" style="width:100%" class="w3-margin-bottom">
-             </div>
-             <div class="w3-half">
-               <img src="/w3images/snow.jpg" style="width:100%" class="w3-margin-bottom">
-             </div>
-           </div>
-            </div>
-          </div>      
-        </div>-->
-        <br>
+        <div id="editform" class="modal">
+            <span onclick="document.getElementById('editform').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <form class="modal-content">
+              <div class="container">
+                <h1 style = "color:black"><center>Edit</center></h1>
+                <hr>
+                <label for="fname" style = "color:black"><b>First Name</b></label>
+                <input type="text" placeholder="" name="fname" id = "fname">
+                <label for="lname" style = "color:black"><b>Last Name</b></label>
+                <input type="text" placeholder="" name="lname"  id = "lname">
+          
+                <label for="psw" style = "color:black"><b>New Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" id="pswS">
+          
+                <label for="psw-repeat" style = "color:black"><b>Confirm Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" id = "rpswS">
+               
+          
+                <div class="clearfix">
+                  <button type="button" onclick="document.getElementById('editform').style.display='none'" class="cancelbtn">Cancel</button>
+                  <button type="submit" class="signupbtn">Save Changes</button>
+                </div>
+              </div>
+           </form>
+          </div>
+          
+
+        
         
   
 
@@ -249,9 +238,24 @@
     //     x.className = x.className.replace(" w3-show", "");
     //   }
     // }
+
+
   </script>
 
+
+  <script>
+  // Get the modal
+  var modal = document.getElementById('id01');
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
   <!-- Include links to JavaScript files below -->
+  <script src="https://kit.fontawesome.com/c7070aa968.js" crossorigin="anonymous"></script>
   <script src="../node_modules/axios/dist/axios.js"></script>
   <script src="../node_modules/jquery/dist/jquery.js"></script>
   <script src="../javascript/renderUserPage.js" type="module"></script>
