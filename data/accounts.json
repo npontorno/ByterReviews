@@ -8,5 +8,15 @@
     "isOwner": false,
     "postCount": 0,
     "posts": []
+  },
+  {
+    "id": 1111575363335877,
+    "first": "b",
+    "last": "b",
+    "email": "b@b.b",
+    "password": "bbbbbb",
+    "isOwner": false,
+    "postCount": 0,
+    "posts": []
   }
 ]

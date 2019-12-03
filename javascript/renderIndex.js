@@ -91,6 +91,7 @@ export const createAccount = async function()
     };
 
     postAccount(account);
+    alert("Account successfully created.");
     return;
 };
 
@@ -129,6 +130,7 @@ export const login2 = async function(accounts, email, pass)
     else
     {
         localStorage.setItem("loggedIn", false);
+        localStorage.setItem("account", {});
         alert("Login failed");
         return;
     }
@@ -139,6 +141,11 @@ export const login2 = async function(accounts, email, pass)
 //
 $(async function()
 {
+    if (localStorage.getItem("loggedIn").toString() == "true")
+    {
+        window.location.href = "http://localhost:3000/html/loginindex.html";
+    }
+
     $(document).on("click", "#id01 .signupbtn", function()
     {
         createAccount();

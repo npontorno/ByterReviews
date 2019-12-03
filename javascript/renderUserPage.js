@@ -23,5 +23,14 @@ $(async function()
     else
     {
         alert("Not logged in!");
+        window.location.href = "http://localhost:3000/";
     }
+
+    $(document).on("click", "#logout", function()
+    {
+        localStorage.setItem("loggedIn", false);
+        localStorage.setItem("account", {});
+        alert("User logged out!");
+        window.location.href = "http://localhost:3000/";
+    })
 });
