@@ -1,4 +1,35 @@
 //
+// Axios Functions
+//
+export async function postItem(item)
+{
+    let input = 
+    {
+        item: item,
+        restaurantId: (JSON.parse(localStorage.getItem("restaurant"))).id
+    }
+
+    const result = await axios({
+        method: 'post',
+        url: 'http://localhost:3002/items',
+        headers: {'Content-Type': 'application/json'},
+        data: input
+    })
+
+    return;
+};
+
+export async function getRestaurants()
+{
+    const result = await axios({
+        method: 'get',
+        url: 'http://localhost:3002/restaurants',
+    })
+
+    return result.data;
+};
+
+//
 // Button Press Handlers
 //
 export const handleItemButtonPress = function(event)
@@ -16,6 +47,58 @@ export const handleItemButtonPress = function(event)
     }
 
     localStorage.setItem("item", JSON.stringify(item));
+    return;
+}
+
+export const handleAddItemButtonPress1 = function()
+{
+    let item = {};
+    let name = $('#inputName').val();
+    let price = $('#inputPrice').val();
+    let category = $('#inputCategory').val();
+    let id = parseInt(333 + "" + Date.now());
+
+    if (price[0] != "$")
+    {
+        price = "$" + price;
+    }
+
+    item = 
+    {
+        id: id,
+        name: name,
+        image: "url",
+        price: price,
+        rating: 3,
+        category: category,
+    };
+
+    postItem(item);
+    return;
+}
+
+export const handleAddItemButtonPress2 = async function()
+{
+    let restaurantId = (JSON.parse(localStorage.getItem("restaurant"))).id;
+
+    await getRestaurants().then(restaurants => handleAddItemButtonPress3(restaurants, restaurantId));
+    return;
+}
+
+export const handleAddItemButtonPress3 = function(restaurants, restaurantId)
+{
+    let restaurant = {}
+
+    for (let i in restaurants)
+    {
+        if (restaurants[i].id == restaurantId)
+        {
+            restaurant = restaurants[i];
+        }
+    }
+
+    alert("Item successfully posted.");
+    window.location.reload();
     return;
 }
 
@@ -98,5 +181,17 @@ $(async function()
     $(document).on("click", "#root a", function()
     {
         handleItemButtonPress(this.parentNode);
+    })
+
+    $(".modal-content").on("button", function(e)
+    {
+        console.log("o")
+        e.preventDefault();
+    })
+
+    $(document).on("click", "#inputAdd", function()
+    {
+        handleAddItemButtonPress1();
+        //handleAddItemButtonPress2();
     })
 });

@@ -27,6 +27,7 @@ app.get("/accounts", getAccounts);
 app.get("/restaurants", getRestaurants);
 app.get("/emails", getEmails);
 app.post("/accounts", postAccount);
+app.post("/items", postItem);
 app.put("/accounts", updateAccount);
 
 //
@@ -62,6 +63,27 @@ function postAccount(request, response)
 {
     let account = request.body;
     
+    accounts.push(account);
+    fs.writeFile(path.resolve(__dirname, "./data/accounts.json"), JSON.stringify(accounts, null, 2), () => {console.log("Wrote new account.")});
+    return;
+}
+
+function postItem(request, response)
+{
+    let item = request.body.item;
+    let restaurantId = request.body.restaurantId;
+    
+    for (i in restaurants)
+    {
+        if (restaurants[i].id == restaurantId)
+        {
+            restaurants[i].items.push(item);
+            fs.writeFile(path.resolve(__dirname, "./data/restaurants.json"), JSON.stringify(restaurants, null, 2), () => {console.log("Added menu item.")});
+            return;
+        }
+    }
+
+
     accounts.push(account);
     fs.writeFile(path.resolve(__dirname, "./data/accounts.json"), JSON.stringify(accounts, null, 2), () => {console.log("Wrote new account.")});
     return;

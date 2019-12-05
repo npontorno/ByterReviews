@@ -254,11 +254,17 @@ for (var i = 0; i < btns.length; i++) {
         <h1 style = "color:black;"><center>Add Item</center></h1>
         <hr>
         <label for="fname" style = "color:black;"><b>Name as it appears on the Menu: </b></label>
-        <input type="text" placeholder="" name="fname" id = "fname" required>
-  
+        <input type="text" placeholder="" name="fname" id = "inputName" required>
+        
+        <label for="fname" style = "color:black;"><b>Price in dollars: </b></label>
+        <input type="text" placeholder="" name="fname" id = "inputPrice" required>
+
+        <label for="fname" style = "color:black;"><b>Item category (Entree, Side, Drink, etc.): </b></label>
+        <input type="text" placeholder="" name="fname" id = "inputCategory" required>
+
         <div class="clearfix">
           <button type="button" onclick="document.getElementById('addform').style.display='none'" class="cancelbtn">Cancel</button>
-          <button type="submit" class="signupbtn">Add</button>
+          <button type="button" onclick="document.getElementById('addform').style.display='none'" class="signupbtn" id="inputAdd">Add</button>
         </div>
       </div>
    </form>
