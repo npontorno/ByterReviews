@@ -1,19 +1,23 @@
 //
-// Axios Functions
-//
-export async function getRestaurant()
-{
-    const result = await axios({
-        method: 'get',
-        url: 'http://localhost:3002/restaurants',
-    })
-
-    return result.data[0];
-};
-
-//
 // Button Press Handlers
 //
+export const handleItemButtonPress = function(event)
+{
+    let id = event.id;
+    let items = JSON.parse(localStorage.getItem("restaurant")).items;
+    let item = {}
+
+    for (let i in items)
+    {
+        if (items[i].id == id)
+        {
+            item = items[i];
+        }
+    }
+
+    localStorage.setItem("item", JSON.stringify(item));
+    return;
+}
 
 //
 // Template for loading each menu item
@@ -22,7 +26,7 @@ export const renderItem = function(item)
 {
     let format =
         `<div class="column" id="${item.id}" style="background-color:#aaa;">
-        <a href="Foodpage.html" >${item.name}</a>
+        <a href="http://localhost:3000/html/Foodpage.html" >${item.name}</a>
         <p></p>
         </div>`
 
@@ -32,15 +36,11 @@ export const renderItem = function(item)
 //
 // Appends account into the DOM
 //
-export const loadRestaurantIntoDOM1 = async function()
-{
-    await getRestaurant().then(restaurant => loadRestaurantIntoDOM2(restaurant));
-    return;
-};
 
-export const loadRestaurantIntoDOM2 = function(restaurant)
+export const loadRestaurantIntoDOM = function()
 {
     const $root = $("#root");
+    let restaurant = JSON.parse(localStorage.getItem("restaurant"));
     let items = restaurant.items;
     let html = "";
     let counter = 1;
@@ -93,5 +93,10 @@ export const loadRestaurantIntoDOM2 = function(restaurant)
 //
 $(async function()
 {
-    loadRestaurantIntoDOM1();
+    loadRestaurantIntoDOM();
+
+    $(document).on("click", "#root a", function()
+    {
+        handleItemButtonPress(this.parentNode);
+    })
 });
