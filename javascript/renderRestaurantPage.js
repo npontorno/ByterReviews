@@ -50,7 +50,7 @@ export const handleItemButtonPress = function(event)
     return;
 }
 
-export const handleAddItemButtonPress1 = function()
+export const handleAddItemButtonPress = function()
 {
     let item = {};
     let name = $('#inputName').val();
@@ -74,31 +74,7 @@ export const handleAddItemButtonPress1 = function()
     };
 
     postItem(item);
-    return;
-}
-
-export const handleAddItemButtonPress2 = async function()
-{
-    let restaurantId = (JSON.parse(localStorage.getItem("restaurant"))).id;
-
-    await getRestaurants().then(restaurants => handleAddItemButtonPress3(restaurants, restaurantId));
-    return;
-}
-
-export const handleAddItemButtonPress3 = function(restaurants, restaurantId)
-{
-    let restaurant = {}
-
-    for (let i in restaurants)
-    {
-        if (restaurants[i].id == restaurantId)
-        {
-            restaurant = restaurants[i];
-        }
-    }
-
     alert("Item successfully posted.");
-    window.location.reload();
     return;
 }
 
@@ -119,11 +95,26 @@ export const renderItem = function(item)
 //
 // Appends account into the DOM
 //
-
-export const loadRestaurantIntoDOM = function()
+export const loadRestaurantIntoDOM1 = async function()
 {
+    await getRestaurants().then(restaurants => loadRestaurantIntoDOM2(restaurants));
+    return;
+}
+
+
+export const loadRestaurantIntoDOM2 = function(restaurants)
+{
+    let restaurant = {}
+
+    for (let i in restaurants)
+    {
+        if (restaurants[i].id == (JSON.parse(localStorage.getItem("restaurant")).id))
+        {
+            restaurant = restaurants[i];
+        }
+    }
+
     const $root = $("#root");
-    let restaurant = JSON.parse(localStorage.getItem("restaurant"));
     let items = restaurant.items;
     let html = "";
     let counter = 1;
@@ -176,17 +167,15 @@ export const loadRestaurantIntoDOM = function()
 //
 $(async function()
 {
-    loadRestaurantIntoDOM();
+    loadRestaurantIntoDOM1();
 
     $(document).on("click", "#root a", function()
     {
         handleItemButtonPress(this.parentNode);
     })
 
-    $(document).on("click", "#inputAdd", function(e)
+    $(document).on("click", "#inputAdd", function()
     {
-        e.preventDefault();
-        handleAddItemButtonPress1();
-        //handleAddItemButtonPress2();
+        handleAddItemButtonPress();
     })
 });
