@@ -183,14 +183,9 @@ $(async function()
         handleItemButtonPress(this.parentNode);
     })
 
-    $(".modal-content").on("button", function(e)
+    $(document).on("click", "#inputAdd", function(e)
     {
-        console.log("o")
         e.preventDefault();
-    })
-
-    $(document).on("click", "#inputAdd", function()
-    {
         handleAddItemButtonPress1();
         //handleAddItemButtonPress2();
     })
