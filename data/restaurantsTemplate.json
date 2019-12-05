@@ -8,7 +8,7 @@
         "state": "NC",
         "zip": 27516,
         "address": "address goes here",
-        "cusine": "American",
+        "cuisine": "American",
         "items":
         [
             {
@@ -40,7 +40,7 @@
         "state": "NC",
         "zip": 27516,
         "address": "address goes here",
-        "cusine": "American",
+        "cuisine": "American",
         "items": []
     }
 ]
