@@ -30,8 +30,12 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
   <a class="w3-bar-item  w3-hide-small w3-padding-large" style= "font-display: bold">
                EXPLORE RESTAURANTS 
   </a>
+
+  <center><button onclick="document.getElementById('id05').style.display='block'" style="width:auto;" class= "claim">Claim your Resturant</button>
+</center>
   </div>
  </div>
+
 </div>
 
 <!-- Navbar on small screens -->
@@ -104,8 +108,50 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
       
     <!-- End Middle Column -->
     </div>
-    
 
+    <!--- ADD A RESTURAUNT -->
+    
+    <div id="id05" class="modal">
+        <span onclick="document.getElementById('id05').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <form class="modal-content">
+          <div class="container">
+            <h1 style = "color:black"><center>Claim Your Resturant</center></h1>
+            <hr>
+            <h2 style = "color:red; font-size: 12px" ><center>*You must verify your ownership</center></h2>
+
+            <label for="fname" style = "color:black"><b>Resturant Name:</b></label>
+            <input type="text" placeholder="" name="Rname" id = "Rname" required> 
+
+            <label for="fname" style = "color:black"><b>Address: </b></label>
+            <input type="text" placeholder="" name="address" id = "address" required> 
+            <label for="fname" style = "color:black"><b>City: </b></label>
+            <input type="text" placeholder="" name="city" id = "city" required> 
+            <label for="fname" style = "color:black"><b>State: </b></label>
+            <input type="text" placeholder="" name="state" id = "state" required> 
+            <label for="fname" style = "color:black"><b>Zipcode: </b></label>
+            <input type="text" placeholder="" name="zip" id = "zip" required> 
+ 
+            <p style = "color:black">By claiming a resturant you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+      
+            <div class="clearfix">
+              <button type="button" onclick="document.getElementById('id05').style.display='none'" class="cancelbtn">Cancel</button>
+              <button type="submit" class="signupbtn">Claim</button>
+            </div>
+          </div>
+       </form>
+      </div>
+      
+      <script>
+      // Get the modal
+      var modal = document.getElementById('id01');
+      
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+      </script>
     
   <!-- End Grid -->
   </div>
