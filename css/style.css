@@ -10,7 +10,11 @@ header{
     background-position: center;
 
 }
+h1 {
 
+  color: white;
+  font-size: 10px;
+} 
 .parallax {
     /* The image used */
     
