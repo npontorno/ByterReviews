@@ -27,14 +27,6 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
     </div>
   </div>
   <div class = "exptitle">
-  <a class="w3-bar-item  w3-hide-small w3-padding-large" style= "font-display: bold">
-               EXPLORE RESTAURANTS 
-  </a>
-
-
-  <center>  <a href="./claim.html" class="w3-bar-item w3-button w3-padding-large w3-theme-d4">Claim Your Resturant</a>
-
-  </center>
   </div>
  </div>
 
@@ -55,61 +47,40 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
 
     
       
-      <!---RENDER DISPLAY FOOD REVIEWS This is the generic div for display posts-->
-      <div class="w3-container w3-card w3-white w3-round w3-margin" id = "revdis"><br>
-        <img src="" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
-        
-        <h4><a href="ResturantPage.html">Example RESTAURANT</a></h4><br>
-        <hr class="w3-clear">
-        <p></p>
-          <div class="w3-row-padding" style="margin:0 -16px">
-            <div class="w3-half">
-            </div>
-        </div>
-      </div>
+     
+            <h1 style = "color:black"><center>Claim Your Resturant</center></h1>
+            <hr>
+            <h2 style = "color:red; font-size: 12px" ><center>*You must verify your ownership</center></h2>
 
+            <label for="fname" style = "color:black"><b>Resturant Name:</b></label>
+            <input type="text" placeholder="" name="Rname" id = "Rname" required> 
 
-      <div class="w3-container w3-card w3-white w3-round w3-margin" id = "revdis"><br>
-        <img src="" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
-        <h4></h4><br>
-        <hr class="w3-clear">
-        <p></p>
-          <div class="w3-row-padding" style="margin:0 -16px">
-            <div class="w3-half">
-            </div>
-        </div>
-      </div>
-
-
-      <div class="w3-container w3-card w3-white w3-round w3-margin" id = "revdis"><br>
-        <img src="" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
-        <h4></h4><br>
-        <hr class="w3-clear">
-        <p></p>
-          <div class="w3-row-padding" style="margin:0 -16px">
-            <div class="w3-half">
-            </div>
-        </div>
-      </div>
-
-
-      <div class="w3-container w3-card w3-white w3-round w3-margin" id = "revdis"><br>
-        <img src="" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
-        <span class="w3-right w3-opacity"></span>
-        <h4></h4><br>
-        <hr class="w3-clear">
-        <p></p>
-          <div class="w3-row-padding" style="margin:0 -16px">
-            <div class="w3-half">
-            </div>
-        </div>
-      </div>
+            <label for="fname" style = "color:black"><b>Address: </b></label>
+            <input type="text" placeholder="" name="address" id = "address" required> 
+            <label for="fname" style = "color:black"><b>City: </b></label>
+            <input type="text" placeholder="" name="city" id = "city" required> 
+            <label for="fname" style = "color:black"><b>State: </b></label>
+            <input type="text" placeholder="" name="state" id = "state" required> 
+            <label for="fname" style = "color:black"><b>Zipcode: </b></label>
+            <input type="text" placeholder="" name="zip" id = "zip" required> 
+ 
+            <p style = "color:black">By claiming a resturant you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
       
+            <div class="clearfix">
+              <button type="button"  class="cancelbtn">Cancel</button>
+              <button type="submit" onclick="document.getElementById('id06').style.display='none'"class="signupbtn">Claim</button>
+            </div>
+                      
+</div>
+
+
 
       
       
     <!-- End Middle Column -->
     </div>
+
+    <!--- ADD A RESTURAUNT -->
     
   <!-- End Grid -->
   </div>
@@ -117,24 +88,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
 <!-- End Page Container -->
 </div>
 <br>
- 
-<script>
-
-
-
-  
-// Accordion
-function myFunction(id) {
-  var x = document.getElementById(id);
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-    x.previousElementSibling.className += " w3-theme-d1";
-  } else { 
-    x.className = x.className.replace("w3-show", "");
-    x.previousElementSibling.className = 
-    x.previousElementSibling.className.replace(" w3-theme-d1", "");
-  }
-}
+ <script>
 
 // Used to toggle the menu on smaller screens when clicking on the menu button
 function openNav() {
@@ -151,7 +105,6 @@ function openNav() {
 <script src="https://kit.fontawesome.com/c7070aa968.js" crossorigin="anonymous"></script>
 <script src="../node_modules/axios/dist/axios.js"></script>
 <script src="../node_modules/jquery/dist/jquery.js"></script>
-<script src="../javascript/renderExplore.js" type="module"></script>
 
 </body>
 </html> 
