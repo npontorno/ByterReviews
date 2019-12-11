@@ -58,6 +58,12 @@ export const handleAddItemButtonPress = function()
     let category = $('#inputCategory').val();
     let id = parseInt(333 + "" + Date.now());
 
+    if ((name == "") || (price == "") || (category == ""))
+    {
+        alert("You must fill out the entire form.");
+        return;
+    }
+
     if (price[0] != "$")
     {
         price = "$" + price;
@@ -74,7 +80,8 @@ export const handleAddItemButtonPress = function()
     };
 
     postItem(item);
-    alert("Item successfully posted.");
+    alert("Item post pending, check back soon.");
+    window.location.href = "http://localhost:3000/html/explore.html";
     return;
 }
 
@@ -176,6 +183,14 @@ $(async function()
 
     $(document).on("click", "#inputAdd", function()
     {
+        let loggedIn = localStorage.getItem("loggedIn").toString();
+
+        if (loggedIn == "false")
+        {
+            alert("You must be logged in to do that.");
+            return;
+        }
+
         handleAddItemButtonPress();
     })
 });

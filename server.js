@@ -28,6 +28,7 @@ app.get("/restaurants", getRestaurants);
 app.get("/emails", getEmails);
 app.post("/accounts", postAccount);
 app.post("/items", postItem);
+app.post("/posts", postReview);
 app.put("/accounts", updateAccount);
 
 //
@@ -82,11 +83,22 @@ function postItem(request, response)
             return;
         }
     }
+}
 
-
-    accounts.push(account);
-    fs.writeFile(path.resolve(__dirname, "./data/accounts.json"), JSON.stringify(accounts, null, 2), () => {console.log("Wrote new account.")});
-    return;
+function postReview(request, response)
+{
+    let post = request.body.post;
+    let accountId = request.body.accountId;
+    
+    for (i in accounts)
+    {
+        if (accounts[i].id == accountId)
+        {
+            accounts[i].posts.push(post);
+            fs.writeFile(path.resolve(__dirname, "./data/accounts.json"), JSON.stringify(accounts, null, 2), () => {console.log("Posted new review.")});
+            return;
+        }
+    }
 }
 
 function updateAccount(request, response)

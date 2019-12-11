@@ -7,7 +7,16 @@
     "password": "aaaaaa",
     "isOwner": false,
     "postCount": 0,
-    "posts": []
+    "posts": [
+      {
+        "id": 4441576090852895,
+        "itemId": 3331,
+        "body": "This is a new review",
+        "rating": 3,
+        "upvotes": 0,
+        "timeStamp": "2019-12-11T19:00:52.895Z"
+      }
+    ]
   },
   {
     "id": 1111575363335877,
