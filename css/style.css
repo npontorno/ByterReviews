@@ -19,6 +19,7 @@ h1 {
   color: white;
   font-size: 10px;
 } 
+
 .parallax {
     /* The image used */
     
@@ -56,12 +57,16 @@ body{
   font-family: 'Open Sans', sans-serif;
 }
 
+.w3-quarter{
+border: solid black 2px; 
+}
 .search {
   width: 100%;
   position: relative;
   display: flex;
   
 }
+
 
 .searchTerm {
   width: 200%;
