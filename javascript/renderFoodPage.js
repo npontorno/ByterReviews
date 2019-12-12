@@ -29,6 +29,19 @@ export async function getAccounts()
     return result.data;
 };
 
+export async function deletePost(postId)
+{
+    let id = [postId];
+
+    const result = await axios({
+        method: 'delete',
+        url: 'http://localhost:3002/posts',
+        data: id
+    })
+
+    return;
+};
+
 //
 // Button Press Handlers
 //
@@ -68,6 +81,48 @@ export const handlePostButtonPress = async function()
     return;
 };
 
+export const handleDeleteButtonPress1 = async function(postId)
+{
+    await getAccounts().then(accounts => handleDeleteButtonPress2(accounts, postId));
+    return;
+}
+
+
+export const handleDeleteButtonPress2 = async function(accounts, postId)
+{
+    let accountId = (JSON.parse(localStorage.getItem("account"))).id;
+    let myAccount = {};
+    let postCheck = 0;
+
+    accounts.forEach(account =>
+    {
+        if (account.id == accountId)
+        {
+            myAccount = account;
+        }
+    })
+
+    myAccount.posts.forEach(post => 
+    {
+        if (post.id == postId)
+        {
+            postCheck = 1;
+        }
+    })
+
+    if (postCheck == 0)
+    {
+        alert("You cannot delete someone else's post!");
+        return;
+    }
+    
+    deletePost(postId);
+    alert("Post successfully deleted.")
+    location.reload();
+    return;
+}
+
+
 //
 // Template for loading each menu item
 //
@@ -92,7 +147,7 @@ export const renderPost = function(postInfo)
         <div class="w3-row-padding" style="margin:0 -16px">
         </div>
         <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button>
-        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"> Delete Post</button> 
+        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom deletePost"> Delete Post</button> 
         </div>`
 
     return format;
@@ -159,7 +214,7 @@ $(async function()
 
     $(document).on("click", ".postbtn", function()
     {
-        let loggedIn = localStorage.getItem("loggedIn").toString();
+        let loggedIn = localStorage.getItem("loggedIn");
 
         if (loggedIn == "false")
         {
@@ -168,5 +223,18 @@ $(async function()
         }
 
         handlePostButtonPress();
+    })
+
+    $(document).on("click", ".deletePost", function()
+    {
+        let loggedIn = localStorage.getItem("loggedIn").toString();
+
+        if (loggedIn == "false")
+        {
+            alert("You must be logged in to do that.");
+            return;
+        }
+
+        handleDeleteButtonPress1(this.parentNode.id);
     })
 });

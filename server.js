@@ -31,6 +31,7 @@ app.post("/restaurants", postRestaurant);
 app.post("/items", postItem);
 app.post("/posts", postReview);
 app.put("/accounts", updateAccount);
+app.delete("/posts", deletePost);
 
 //
 // Handler Callback Functions
@@ -126,4 +127,21 @@ function updateAccount(request, response)
     }
 
     return;
+}
+
+function deletePost(request, response)
+{
+    let postId = request.body[0];
+    for (i in accounts)
+    {
+        for (j in accounts[i].posts)
+        {
+            if (accounts[i].posts[j].id == postId)
+            {
+                accounts[i].posts.splice(j, 1);
+                fs.writeFile(path.resolve(__dirname, "./data/accounts.json"), JSON.stringify(accounts, null, 2), () => {console.log("Deleted a post.")});
+                return;
+            }
+        }
+    }
 }

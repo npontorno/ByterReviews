@@ -1,39 +1,29 @@
 [
   {
-    "id": 1111575318003495,
-    "first": "a",
-    "last": "a",
+    "id": 1111576173783339,
+    "first": "John",
+    "last": "Doe",
     "email": "a@a.a",
     "password": "aaaaaa",
     "isOwner": true,
     "postCount": 0,
     "posts": [
       {
-        "id": 4441576148189428,
+        "id": 4441576174204986,
         "itemId": 3331576148153748,
-        "body": "They were fresh and I enjoyed them!",
+        "body": "I really enjoyed this item!",
         "rating": 3,
         "upvotes": 0,
-        "timeStamp": "12/12/2019, 5:56:29 AM"
+        "timeStamp": "12/12/2019, 1:10:04 PM"
       }
     ]
   },
   {
-    "id": 1111575363335877,
-    "first": "b",
-    "last": "b",
+    "id": 1111576173797144,
+    "first": "Jane",
+    "last": "Doe",
     "email": "b@b.b",
     "password": "bbbbbb",
-    "isOwner": false,
-    "postCount": 0,
-    "posts": []
-  },
-  {
-    "id": 1111575539304163,
-    "first": "c",
-    "last": "c",
-    "email": "c@c.c",
-    "password": "cccccc",
     "isOwner": false,
     "postCount": 0,
     "posts": []
