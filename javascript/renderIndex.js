@@ -33,6 +33,16 @@ export async function getAccounts()
     return result.data;
 };
 
+export async function getRestaurants()
+{
+    const result = await axios({
+        method: 'get',
+        url: 'http://localhost:3002/restaurants',
+    })
+
+    return result.data;
+};
+
 //
 // Button Press Handlers
 //
@@ -136,6 +146,61 @@ export const login2 = async function(accounts, email, pass)
     }
 };
 
+export const search1 = async function()
+{
+    await getRestaurants().then(restaurants => search2(restaurants));
+    return;
+}
+
+export const search2 = async function(restaurants)
+{
+    let matchingRestaurants = [];
+    let searchTerm = $('.searchTerm').val();
+
+    restaurants.forEach(restaurant =>
+    {
+        if (restaurant.name.toLowerCase().includes(searchTerm.toLowerCase()))
+        {
+            matchingRestaurants.push(restaurant); 
+        }
+    });
+
+    matchingRestaurants.forEach(restaurant =>
+    {
+        //console.log(restaurant.name);
+    })
+
+    localStorage.setItem("matchingRestaurants", JSON.stringify(matchingRestaurants)); 
+    return;
+}
+
+//
+// Template for loading each matching restaurant
+//
+export const renderMatchingRestaurant = function(restaurant)
+{
+    let format = `<option value="${restaurant.name}" class="${restaurant.name}" id="${restaurant.id}">`
+
+    return format;
+};
+
+//
+// Appends matching restaurants into the DOM
+//
+export const loadMatchingRestaurantsIntoDOM = async function(matchingRestaurants)
+{
+    const $root = $("#browsers");
+    let html = "";
+
+    matchingRestaurants.forEach(restaurant =>
+    {
+        html += renderMatchingRestaurant(restaurant);
+    })
+
+    $root.html(html);
+    return;
+}
+
 //
 // Main function to be executed upon page loading
 //
@@ -154,5 +219,12 @@ $(async function()
     $(document).on("click", "#id02 .signupbtn", function()
     {
         login1();
+    })
+
+    $(document).on("keypress", ".searchTerm", function()
+    {
+        search1();
+        let matchingRestaurants = JSON.parse(localStorage.getItem("matchingRestaurants"));
+        loadMatchingRestaurantsIntoDOM(matchingRestaurants);
     })
 });
