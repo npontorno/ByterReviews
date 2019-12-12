@@ -3,28 +3,28 @@
     "id": 2222,
     "ownerId": 1112,
     "rating": 2.23,
-    "name": "restaurantName",
+    "name": "Spicy 9 Sushi Bar and Asian Restaurant",
     "city": "Chapel Hill",
     "state": "NC",
     "zip": 27516,
-    "address": "address goes here",
-    "cuisine": "American",
+    "address": " 140 W Franklin St #150, Chapel Hill, NC 27516",
+    "cuisine": "Asian",
     "items": [
       {
         "id": 3331,
-        "name": "burger",
+        "name": "Yummy Yummy Role",
         "image": "url",
-        "price": "$5.23",
+        "price": "$13.00",
         "rating": 4.5,
         "category": "Entree"
       },
       {
         "id": 3333,
-        "name": "cocktail",
+        "name": "Shrimp Tempura Roll",
         "image": "url",
-        "price": "$7.23",
+        "price": "$11.00",
         "rating": 3.2,
-        "category": "Drink"
+        "category": "Entree"
       }
     ]
   }
