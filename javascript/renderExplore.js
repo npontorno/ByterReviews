@@ -45,7 +45,8 @@ export const renderRestaurant = function(restaurant)
 {
     let format =
         `<div class="w3-container w3-card w3-white w3-round w3-margin" id = "${restaurant.id}"><br>
-        <img src="" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+        <i class="fa fa-cutlery" ></i>
+
         <h4><a href="http://localhost:3000/html/ResturantPage.html">${restaurant.name}</a></h4><br>
         <hr class="w3-clear">
         <p></p>
