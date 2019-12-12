@@ -108,7 +108,6 @@ export const loadRestaurantIntoDOM1 = async function()
     return;
 }
 
-
 export const loadRestaurantIntoDOM2 = function(restaurants)
 {
     let restaurant = {}

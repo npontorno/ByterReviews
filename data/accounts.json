@@ -9,12 +9,28 @@
     "postCount": 0,
     "posts": [
       {
-        "id": 4441576090852895,
+        "id": 4441576113127129,
         "itemId": 3331,
-        "body": "This is a new review",
+        "body": "Yum! This was good",
         "rating": 3,
         "upvotes": 0,
-        "timeStamp": "2019-12-11T19:00:52.895Z"
+        "timeStamp": "12/11/2019, 8:12:07 PM"
+      },
+      {
+        "id": 4441576113140629,
+        "itemId": 3331,
+        "body": "Eww! This was bad :(",
+        "rating": 3,
+        "upvotes": 0,
+        "timeStamp": "12/11/2019, 8:12:20 PM"
+      },
+      {
+        "id": 4441576113167291,
+        "itemId": 3333,
+        "body": "This was alright",
+        "rating": 3,
+        "upvotes": 0,
+        "timeStamp": "12/11/2019, 8:12:47 PM"
       }
     ]
   },
