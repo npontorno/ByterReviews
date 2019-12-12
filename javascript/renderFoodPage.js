@@ -91,7 +91,8 @@ export const renderPost = function(postInfo)
         <p>Upvotes: ${upvotes}</p>
         <div class="w3-row-padding" style="margin:0 -16px">
         </div>
-        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
+        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button>
+        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"> Delete Post</button> 
         </div>`
 
     return format;
