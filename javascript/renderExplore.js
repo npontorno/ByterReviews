@@ -88,4 +88,21 @@ $(async function()
     {
         handleRestaurantButtonPress1(this.parentNode.parentNode);
     })
+
+    $(document).on("click", "#claim", function()
+    {
+        if (localStorage.getItem("loggedIn").toString() == "false")
+        {
+            alert("Not logged in!");
+            return;
+        }
+    
+        if (JSON.parse(localStorage.getItem("account")).isOwner.toString() == "false")
+        {
+            alert("Only verified restaurant owners can add restaurants.")
+            return;
+        }
+
+        window.location.href = "http://localhost:3000/html/claim.html";
+    })
 });

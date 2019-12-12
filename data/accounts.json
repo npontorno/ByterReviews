@@ -5,7 +5,7 @@
     "last": "a",
     "email": "a@a.a",
     "password": "aaaaaa",
-    "isOwner": false,
+    "isOwner": true,
     "postCount": 0,
     "posts": [
       {
