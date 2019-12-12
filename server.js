@@ -27,6 +27,7 @@ app.get("/accounts", getAccounts);
 app.get("/restaurants", getRestaurants);
 app.get("/emails", getEmails);
 app.post("/accounts", postAccount);
+app.post("/restaurants", postRestaurant);
 app.post("/items", postItem);
 app.post("/posts", postReview);
 app.put("/accounts", updateAccount);
@@ -66,6 +67,15 @@ function postAccount(request, response)
     
     accounts.push(account);
     fs.writeFile(path.resolve(__dirname, "./data/accounts.json"), JSON.stringify(accounts, null, 2), () => {console.log("Wrote new account.")});
+    return;
+}
+
+function postRestaurant(request, response)
+{
+    let restaurant = request.body;
+    
+    restaurants.push(restaurant);
+    fs.writeFile(path.resolve(__dirname, "./data/restaurants.json"), JSON.stringify(restaurants, null, 2), () => {console.log("Wrote new restaurant.")});
     return;
 }
 

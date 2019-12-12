@@ -1,125 +1,46 @@
 [
   {
-    "id": 2221,
-    "ownerId": 1112,
-    "rating": 2.23,
-    "name": "Spicy 9 Sushi Bar and Asian Restaurant",
-    "city": "Chapel Hill",
+    "id": 2221576147881563,
+    "ownerId": 1111575318003495,
+    "rating": 3,
+    "name": "The Pit",
+    "city": "Research Triangle",
+    "state": "",
+    "zip": "27601",
+    "address": "328 W Davie St, Raleigh 27601",
+    "cuisine": "BBQ",
+    "items": []
+  },
+  {
+    "id": 2221576147920301,
+    "ownerId": 1111575318003495,
+    "rating": 3,
+    "name": "The Cowfish Sushi Burger Bar",
+    "city": "Charlotte",
+    "state": "",
+    "zip": "28211",
+    "address": "4310 Sharon Road 28211",
+    "cuisine": "Burger, Sushi, Fusion",
+    "items": []
+  },
+  {
+    "id": 2221576148016324,
+    "ownerId": 1111575318003495,
+    "rating": 3,
+    "name": "Wendy's",
+    "city": "Carrboro",
     "state": "NC",
-    "zip": 27516,
-    "address": " 140 W Franklin St #150, Chapel Hill, NC 27516",
-    "cuisine": "Asian",
+    "zip": "27510",
+    "address": "100 S. Greensboro St.",
+    "cuisine": "Fast Food",
     "items": [
       {
-        "id": 3331,
-        "name": "Yummy Yummy Role",
+        "id": 3331576148153748,
+        "name": "French Fries (Small)",
         "image": "url",
-        "price": "$13.00",
-        "rating": 4.5,
-        "category": "Entree"
-      },
-      {
-        "id": 3333,
-        "name": "Shrimp Tempura Roll",
-        "image": "url",
-        "price": "$11.00",
-        "rating": 3.2,
-        "category": "Entree"
-      },
-      {
-        "id": 3331576127272995,
-        "name": "Pad Thai",
-        "image": "url",
-        "price": "$10.00",
+        "price": "$1.59",
         "rating": 3,
-        "category": "Entree"
-      }
-    ]
-  },
-  {
-    "id": 2222,
-    "ownerId": 1112,
-    "rating": 2.23,
-    "name": "The Pizza Press",
-    "city": "Chapel Hill",
-    "state": "NC",
-    "zip": 27516,
-    "address": " 140 W Franklin St #150, Chapel Hill, NC 27516",
-    "cuisine": "Asian",
-    "items": [
-      {
-        "id": 3331,
-        "name": "Yummy Yummy Role",
-        "image": "url",
-        "price": "$13.00",
-        "rating": 4.5,
-        "category": "Entree"
-      },
-      {
-        "id": 3333,
-        "name": "Shrimp Tempura Roll",
-        "image": "url",
-        "price": "$11.00",
-        "rating": 3.2,
-        "category": "Entree"
-      }
-    ]
-  },
-  {
-    "id": 2223,
-    "ownerId": 1112,
-    "rating": 2.23,
-    "name": "Yogurt Pump",
-    "city": "Chapel Hill",
-    "state": "NC",
-    "zip": 27516,
-    "address": " 140 W Franklin St #150, Chapel Hill, NC 27516",
-    "cuisine": "Asian",
-    "items": [
-      {
-        "id": 3331,
-        "name": "Yummy Yummy Role",
-        "image": "url",
-        "price": "$13.00",
-        "rating": 4.5,
-        "category": "Entree"
-      },
-      {
-        "id": 3333,
-        "name": "Shrimp Tempura Roll",
-        "image": "url",
-        "price": "$11.00",
-        "rating": 3.2,
-        "category": "Entree"
-      }
-    ]
-  },
-  {
-    "id": 2224,
-    "ownerId": 1112,
-    "rating": 2.23,
-    "name": "Cosmic Cantina",
-    "city": "Chapel Hill",
-    "state": "NC",
-    "zip": 27516,
-    "address": " 140 W Franklin St #150, Chapel Hill, NC 27516",
-    "cuisine": "Asian",
-    "items": [
-      {
-        "id": 3331,
-        "name": "Yummy Yummy Role",
-        "image": "url",
-        "price": "$13.00",
-        "rating": 4.5,
-        "category": "Entree"
-      },
-      {
-        "id": 3333,
-        "name": "Shrimp Tempura Roll",
-        "image": "url",
-        "price": "$11.00",
-        "rating": 3.2,
-        "category": "Entree"
+        "category": "Side"
       }
     ]
   }

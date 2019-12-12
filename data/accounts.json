@@ -9,28 +9,12 @@
     "postCount": 0,
     "posts": [
       {
-        "id": 4441576113127129,
-        "itemId": 3331,
-        "body": "Yum! This was good",
+        "id": 4441576148189428,
+        "itemId": 3331576148153748,
+        "body": "They were fresh and I enjoyed them!",
         "rating": 3,
         "upvotes": 0,
-        "timeStamp": "12/11/2019, 8:12:07 PM"
-      },
-      {
-        "id": 4441576113140629,
-        "itemId": 3331,
-        "body": "Eww! This was bad :(",
-        "rating": 3,
-        "upvotes": 0,
-        "timeStamp": "12/11/2019, 8:12:20 PM"
-      },
-      {
-        "id": 4441576113167291,
-        "itemId": 3333,
-        "body": "This was alright",
-        "rating": 3,
-        "upvotes": 0,
-        "timeStamp": "12/11/2019, 8:12:47 PM"
+        "timeStamp": "12/12/2019, 5:56:29 AM"
       }
     ]
   },

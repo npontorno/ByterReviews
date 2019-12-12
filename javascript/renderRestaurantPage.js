@@ -162,7 +162,7 @@ export const loadRestaurantIntoDOM2 = function(restaurants)
     }
 
     $("#profile").text(restaurant.name);
-    $("#pemail").text(restaurant.cuisine + " Cuisine");
+    $("#pemail").text("Cuisine: " + restaurant.cuisine);
     $("#numOfReviews").text(restaurant.address + ", " + restaurant.city + ", " + restaurant.state + " " + restaurant.zip);
     $root.html(html);
     return;
