@@ -15,7 +15,7 @@
 
     <body>
         <div id="root"></div>
-
+     
         <header>
             <div class = "main"> 
                 <button onclick="document.getElementById('id03').style.display='block'" style="width:auto; " class= "loginb" id = "explore"><a href="./html/explore.html">Explore</a></button>
@@ -29,15 +29,23 @@
                 </ul>
 
             </div>
+            
             <div> 
               </div>
             <div class= "title">
                     <div class="wrap">
                             <div class="search">
-                               <input type="text" class="searchTerm" placeholder="Search for a restaurant and rate specific menu items">
+                               <input type="text" class="searchTerm" onclick="myFunction()" placeholder="Search for a restaurant and rate specific menu items">
                                <button type="submit" class="searchButton">
                                  <i class="fa fa-search"></i>
+                                 
                               </button>
+
+                         
+
+                                  </div>
+                              
+                          
                             </div>
                             
                          </div>
@@ -119,6 +127,9 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+      
+
 </script>
 
 
