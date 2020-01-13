@@ -195,8 +195,11 @@ export const handleSearchButtonPress2 = async function(restaurants, restaurantId
 //
 export const renderMatchingRestaurant = function(restaurant)
 {
-    let htmlClass = restaurant.name.replace(/\s+/g, '-');
-    let format = `<option value="${restaurant.name}" class="${htmlClass}" id="${restaurant.id}">`;
+    let htmlClass1 = restaurant.name.replace(/\s+/g, '-');
+    console.log(htmlClass1);
+    let htmlClass2 = htmlClass1.replace("'", "&apos");
+    console.log(htmlClass2);
+    let format = `<option value="${restaurant.name}" class="${htmlClass2}" id="${restaurant.id}">`;
 
     return format;
 };
@@ -240,9 +243,11 @@ $(async function()
 
     $(document).on("click", ".searchButton", function()
     {   
-        let searchClass = $(".searchTerm").val().replace(/\s+/g, '-');
-        let queryTerm = "." + searchClass;
+        let searchClass1 = $(".searchTerm").val().replace(/\s+/g, '-');
+        let searchClass2 = searchClass1.replace("'", "&apos");
+        let queryTerm = "." + searchClass2;
         let searchTerm = $(queryTerm)[0];
+        console.log(searchTerm);
         let restaurantId = searchTerm.id;
 
         handleSearchButtonPress1(restaurantId);

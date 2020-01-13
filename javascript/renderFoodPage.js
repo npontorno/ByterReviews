@@ -137,7 +137,7 @@ export const renderPost = function(postInfo)
 
     let format =
         `<div id="${postId}" class="w3-container w3-card w3-white w3-round w3-margin"><br>
-        <img src="/w3images/avatar2.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+        <i class="fa fa-user" aria-hidden="true"></i>
         <span class="w3-right w3-opacity">${timeStamp}</span>
         <h4>${accountName}</h4><br>
         <hr class="w3-clear">
