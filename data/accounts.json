@@ -113,5 +113,34 @@
     "isOwner": false,
     "postCount": 0,
     "posts": []
+  },
+  {
+    "id": 1111604300296666,
+    "first": "savory",
+    "last": "nickel",
+    "email": "savorynickel@gmail.com",
+    "password": "savorynickel",
+    "isOwner": false,
+    "postCount": 0,
+    "posts": []
+  },
+  {
+    "id": 1111604300295790,
+    "first": "savory",
+    "last": "nickel",
+    "email": "savorynickel@gmail.com",
+    "password": "savorynickel",
+    "isOwner": false,
+    "postCount": 0,
+    "posts": [
+      {
+        "id": 4441604300458665,
+        "itemId": 3331604300029312,
+        "body": "I DONT LIKE HAWAIIAN PIZZA >:(",
+        "rating": 3,
+        "upvotes": 0,
+        "timeStamp": "11/2/2020, 2:00:58 AM"
+      }
+    ]
   }
 ]

@@ -99,7 +99,7 @@ $(async function()
 
     $(document).on("click", ".main ul .loginb", function()
     {
-        localStorage.setItem("loggedIn", false);
+        localStorage.setItem("loggedIn", "false");
         localStorage.setItem("account", {});
         alert("User logged out!");
         window.location.href = "http://localhost:3000/";

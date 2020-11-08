@@ -130,7 +130,7 @@ export const login2 = async function(accounts, email, pass)
 
     if (loggedIn)
     {
-        localStorage.setItem("loggedIn", true);
+        localStorage.setItem("loggedIn", "true");
         localStorage.setItem("account", account);
         window.location.href = "http://localhost:3000//html/loginindex.html";
         alert("Successfully logged in!");
@@ -139,7 +139,7 @@ export const login2 = async function(accounts, email, pass)
 
     else
     {
-        localStorage.setItem("loggedIn", false);
+        localStorage.setItem("loggedIn", "false");
         localStorage.setItem("account", JSON.stringify({}));
         alert("Login failed");
         return;
@@ -223,7 +223,12 @@ export const loadMatchingRestaurantsIntoDOM = async function(matchingRestaurants
 //
 $(async function()
 {
-    if (localStorage.getItem("loggedIn").toString() == "true")
+    if (localStorage.getItem("loggedIn") === null)
+    {
+        localStorage.setItem("loggedIn", "false")
+    }
+
+    else if (localStorage.getItem("loggedIn").toString() == "true")
     {
         window.location.href = "http://localhost:3000/html/loginindex.html";
     }

@@ -187,5 +187,26 @@
     "address": "2706 Durham Chapel Hill Blvd, Durham 27707",
     "cuisine": "American, International",
     "items": []
+  },
+  {
+    "id": 2221604299986716,
+    "ownerId": 1111576173783339,
+    "rating": 3,
+    "name": "Pequod's Pizza",
+    "city": "Chicago",
+    "state": "",
+    "zip": "60614",
+    "address": "2207 N Clybourn Avenue 60614",
+    "cuisine": "Pizza, Italian, Sandwich",
+    "items": [
+      {
+        "id": 3331604300029312,
+        "name": "Hawaiian pizza",
+        "image": "url",
+        "price": "$10.50",
+        "rating": 3,
+        "category": "Entree"
+      }
+    ]
   }
 ]
