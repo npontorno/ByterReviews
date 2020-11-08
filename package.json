@@ -1,12 +1,12 @@
 {
-  "name": "426finalproject",
+  "name": "byter-reviews",
   "version": "1.0.0",
-  "description": "426finalproject",
+  "description": "Codebase for the Byter Reviews webapp.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Nick Pontorno & Zara Ehsan",
   "license": "ISC",
   "dependencies": {
     "async": "^3.1.0",
@@ -27,5 +27,5 @@
   "bugs": {
     "url": "https://github.com/npontorno/426FinalProject/issues"
   },
-  "homepage": "https://github.com/npontorno/426FinalProject#readme"
+  "homepage": "https://github.com/npontorno/426FinalProject"
 }
