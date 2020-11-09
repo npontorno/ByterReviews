@@ -1,113 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <title>Final Project</title>
 
-        <!-- Include links to CSS stylesheets below -->
-        <link rel="stylesheet" type="text/css" href="../css/style.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
-    </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <body>
-        <div id="root"></div>
+  <title>Byter</title>
 
-        <header>
-            <div class = "main"> 
-                <button onclick="document.getElementById('id03').style.display='block'" style="width:auto; " class= "loginb" id = "explore"><a href="./explore.html">Explore</a></button>
-                <ul>
-                    <li class="active"><a href="index.html"></a></li>
+  <!-- Include links to CSS stylesheets below -->
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+</head>
 
-                    
-                    <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;" class= "loginb">Logout</button>
-                    <a href="./UserPage.html">My Account</a>
-                    <!-- <li><a href="signup.html">Sign Up</a></li> Lead to Form page -->
-                </ul>
+<body>
+  <div id="root"></div>
+  <header>
+    <div class="main">
+      <button onclick="document.getElementById('id03').style.display='block'" style="width:auto; " class="loginb"
+        id="explore"><a href="./explore.html">Explore</a></button>
 
-            </div>
-            <div class= "title">
-                    <div class="wrap">
-                            <div class="search">
-                              <input type="text" class="searchTerm" onclick="myFunction()" placeholder="Search for a restaurant and rate specific menu items" list="browsers" name="browser">
-                              <datalist id="browsers"></datalist>
-                               <button type="submit" class="searchButton">
-                                 <i class="fa fa-search"></i>
-                              </button>
-                            </div>
-                         </div>
-               
-                <h2>  </h2>
-                <div class="parallax"></div>
-                <div class= "feed">
-                        <center>Browse through the tastiest Menu Items </center>
-                      <!-- RENDER DISPLAY FEED-->
+      <ul>
+        <li class="active"><a href="index.html"></a></li>
 
-  <div class="w3-row-padding w3-padding-16 w3-center">
-      <div class="w3-quarter">
-        <div class = "food">
-        <img src="../Images/IMG_33.jpg" alt="pics" style="width:100%">
-        <h3>Menu Item</h3>
-        <p>Description</p>
-      </div>
-      
+        <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;"
+          class="loginb">Logout</button>
+
+        <a href="./UserPage.html">My Account</a>
+      </ul>
     </div>
-                        </div>
-               
+
+    <div class="title">
+      <div class="wrap">
+        <div class="search">
+          <input type="text" class="searchTerm" onclick="myFunction()"
+            placeholder="Search for a restaurant and rate specific menu items" list="browsers" name="browser">
+
+          <datalist id="browsers"></datalist>
+
+          <button type="submit" class="searchButton">
+            <i class="fa fa-search"></i></button>
+        </div>
+      </div>
+
+      <h2></h2>
+      <div class="parallax"></div>
+      <div class="feed">
+        <center>Browse through the tastiest Menu Items </center>
+
+        <!-- RENDER DISPLAY FEED-->
+        <div class="w3-row-padding w3-padding-16 w3-center">
+          <div class="w3-quarter">
+            <div class="food">
+              <img src="../Images/IMG_33.jpg" alt="pics" style="width:100%">
+
+              <h3>Menu Item</h3>
+
+              <p>Description</p>
             </div>
+          </div>
+        </div>
+      </div>
+      <div></div>
 
-            <div>
-               
-            </div>
-           
-
-
-<script>
-// Get the modal
-var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
-
-
-
-      
       <script>
-      // Get the modal
-      var modals = document.getElementById('id02');
-      
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function(event) {
-        if (event.target == modals) {
-          modal.sstyle.display = "none";
+        // Get the modal
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
         }
-      }
       </script>
 
-<script>
-    // Get the modal
-    var exp = document.getElementById('id03');
-    
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-      if (event.target == modals) {
-        modal.sstyle.display = "none";
-      }
-    }
-    </script>
+      <script>
+        // Get the modal
+        var modals = document.getElementById('id02');
 
-        </header>
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+          if (event.target == modals) {
+            modal.sstyle.display = "none";
+          }
+        }
+      </script>
 
-        <!-- Include links to JavaScript files below -->
-        <script src="https://kit.fontawesome.com/c7070aa968.js" crossorigin="anonymous"></script>
-        <script src="../node_modules/axios/dist/axios.js"></script>
-        <script src="../node_modules/jquery/dist/jquery.js"></script>
-        <script src="../javascript/renderLoginIndex.js" type="module"></script>
-    </body>
+      <script>
+        // Get the modal
+        var exp = document.getElementById('id03');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+          if (event.target == modals) {
+            modal.sstyle.display = "none";
+          }
+        }
+      </script>
+  </header>
+
+  <!-- Include links to JavaScript files below -->
+  <script src="https://kit.fontawesome.com/c7070aa968.js" crossorigin="anonymous"></script>
+  <script src="../node_modules/axios/dist/axios.js"></script>
+  <script src="../node_modules/jquery/dist/jquery.js"></script>
+  <script src="../javascript/renderLoginIndex.js" type="module"></script>
+</body>
+
 </html>
