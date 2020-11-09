@@ -1,198 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <title>Byter</title>
 
-        <!-- Include links to CSS stylesheets below -->
-        <link rel="stylesheet" type="text/css" href="./css/style.css">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
-    </head>
+  <title>Byter</title>
 
-    <body>
-        <div id="root"></div>
-     
-        <header>
-            <div class = "main"> 
-                <button onclick="document.getElementById('id03').style.display='block'" style="width:auto; " class= "loginb" id = "explore"><a href="./html/explore.html">Explore</a></button>
-                <ul>
-                    <li class="active"><a href="index.html"></a></li>
+  <!-- Include links to CSS stylesheets below -->
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+</head>
 
-                    
-                    <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;" class= "loginb">Login</button>
-                    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class= "signb">Sign Up</button>
-                    <!-- <li><a href="signup.html">Sign Up</a></li> Lead to Form page -->
-                </ul>
+<body>
+  <div id="root"></div>
+  <header>
+    <div class="main">
+      <button onclick="document.getElementById('id03').style.display='block'" style="width:auto; " class="loginb"
+        id="explore"><a href="./html/explore.html">Explore</a></button>
 
-            </div>
-            
-            <div> 
-              </div>
-            <div class= "title">
-                    <div class="wrap">
-                            <div class="search">
-                               <input type="text" class="searchTerm"  placeholder="Search for a restaurant and rate specific menu items" list="browsers" name="browser">
-                                 <datalist id="browsers"></datalist>
-          
-                              
-                               <button type="submit" class="searchButton">
-                                 <i class="fa fa-search"></i>
-                                 
-                              </button>
-                             
-                             
+      <ul>
+        <li class="active"><a href="index.html"></a></li>
 
-                              
+        <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;"
+          class="loginb">Login</button>
 
-                                  </div>
-                              
-                          
-                            </div>
-                            
-                         </div>
-               
-                <h2>  </h2>
-                <div class="parallax"></div>
-                <div class= "feed">
-                        <center>Browse the Top Rated Menu Items </center>
-                      <!-- RENDER DISPLAY FEED-->
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="signb">Sign
+          Up</button>
+      </ul>
+    </div>
 
-                      
+    <div></div>
+    <div class="title">
+      <div class="wrap">
+        <div class="search">
+          <input type="text" class="searchTerm" placeholder="Search for a restaurant and rate specific menu items"
+            list="browsers" name="browser">
 
-  <div class="w3-row-padding w3-padding-16 w3-center" id = "food">
-      <div class="w3-quarter">
-        <img src="./Images/Noodles.jpg" alt="Mangonada" style="width:100%">
-        <h3>Mangonada</h3>
+          <datalist id="browsers"></datalist>
+
+          <button type="submit" class="searchButton">
+            <i class="fa fa-search"></i></button>
+        </div>
       </div>
-      <div class="w3-quarter">
-          <img src="./Images/IMG_9152.JPG" alt="Sandwich" style="width:100%">
-          <h3>Shrimp Tempura Roll</h3>
-         
+    </div>
+
+    <h2></h2>
+    <div class="parallax"></div>
+    <div class="feed">
+      <center>Browse the Top Rated Menu Items </center>
+
+      <!-- RENDER DISPLAY FEED-->
+      <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+        <div class="w3-quarter">
+          <img src="./Images/Noodles.jpg" alt="Mangonada" style="width:100%">
+          <h3>Mangonada</h3>
         </div>
 
         <div class="w3-quarter">
-            <img src="./Images/HI.JPG" alt="Sandwich" style="width:100%">
-            <h3>Chocolate Tart</h3>
-          </div>
+          <img src="./Images/IMG_9152.JPG" alt="Sandwich" style="width:100%">
+          <h3>Shrimp Tempura Roll</h3>
+        </div>
 
-          <div class="w3-quarter">
-              <img src="./Images/IMG_1199.png" alt="Sandwich" style="width:100%">
-              <h3>Adana Kebab Platter</h3>
-            </div>
+        <div class="w3-quarter">
+          <img src="./Images/HI.JPG" alt="Sandwich" style="width:100%">
+          <h3>Chocolate Tart</h3>
+        </div>
 
+        <div class="w3-quarter">
+          <img src="./Images/IMG_1199.png" alt="Sandwich" style="width:100%">
+          <h3>Adana Kebab Platter</h3>
+        </div>
       </div>
-       
-      
-<!-- SIGN UP POP UP-->
-<div id="id01" class="modal">
-  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-  <form class="modal-content">
-    <div class="container">
-      <h1 style = "color:black"><center>Sign Up</center></h1>
-      <p><center>Please fill in this form to create an account.</center></p>
-      <hr>
-      <label for="fname"><b>First Name</b></label>
-      <input type="text" placeholder="" name="fname" id = "fname" required>
-      <label for="lname"><b>Last Name</b></label>
-      <input type="text" placeholder="" name="lname"  id = "lname" required>
 
-      <label for="email"><b>Email</b></label>
-      <input type="text" placeholder="Enter Email" name="email" id = "emailS"required>
+      <!-- SIGN UP POP UP-->
+      <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close"
+          title="Close Modal">&times;</span>
 
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" id="pswS" required>
-
-      <label for="psw-repeat"><b>Repeat Password</b></label>
-      <input type="password" placeholder="Repeat Password" name="psw-repeat" id = "rpswS" required>
-
-      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-
-      <div class="clearfix">
-        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-        <button type="submit" class="signupbtn">Sign Up</button>
-      </div>
-    </div>
- </form>
-</div>
-
-<script>
-// Get the modal
-var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-
-      
-
-</script>
-
-
-<!-- LOGIN POP UP-->
-
-<div id="id02" class="modal">
-        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
         <form class="modal-content">
           <div class="container">
-            <h1 style = "color:black" ><center>Login</center></h1>
-            <!--- <p>Don't Have an Account? <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button></p>--->
-            <hr>
-            <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="email" id = "emailL">
-      
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" id = "pswL">
-            
-            <label>
-              <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-            </label>
-      
+            <h1 style="color:black">
+              <center>Sign Up</center>
+            </h1>
 
-            
+            <p>
+              <center>Please fill in this form to create an account.</center>
+            </p>
+
+            <hr>
+            <label for="fname"><b>First Name</b></label>
+            <input type="text" placeholder="" name="fname" id="fname" required>
+
+            <label for="lname"><b>Last Name</b></label>
+            <input type="text" placeholder="" name="lname" id="lname" required>
+
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" id="emailS" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" id="pswS" required>
+
+            <label for="psw-repeat"><b>Repeat Password</b></label>
+            <input type="password" placeholder="Repeat Password" name="psw-repeat" id="rpswS" required>
+
+            <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
             <div class="clearfix">
-            <button type="submit" class="signupbtn">Login</button>
+              <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                class="cancelbtn">Cancel</button>
+
+              <button type="submit" class="signupbtn">Sign Up</button>
             </div>
           </div>
         </form>
       </div>
-      
+
       <script>
-      // Get the modal
-      var modals = document.getElementById('id02');
-      
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function(event) {
-        if (event.target == modals) {
-          modal.sstyle.display = "none";
+        // Get the modal
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
         }
-      }
       </script>
 
-<script>
-    // Get the modal
-    var exp = document.getElementById('id03');
-    
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-      if (event.target == modals) {
-        modal.sstyle.display = "none";
-      }
-    }
-    </script>
+      <!-- LOGIN POP UP-->
+      <div id="id02" class="modal">
+        <span onclick="document.getElementById('id02').style.display='none'" class="close"
+          title="Close Modal">&times;</span>
 
-        </header>
+        <form class="modal-content">
+          <div class="container">
+            <h1 style="color:black">
+              <center>Login</center>
+            </h1>
 
-        <!-- Include links to JavaScript files below -->
-        <script src="https://kit.fontawesome.com/c7070aa968.js" crossorigin="anonymous"></script>
-        <script src="./node_modules/axios/dist/axios.js"></script>
-        <script src="./node_modules/jquery/dist/jquery.js"></script>
-        <script src="./javascript/renderIndex.js" type="module"></script>
-    </body>
+            <hr>
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" id="emailL">
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" id="pswL">
+
+            <label>
+              <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+            </label>
+
+            <div class="clearfix">
+              <button type="submit" class="signupbtn">Login</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <script>
+        // Get the modal
+        var modals = document.getElementById('id02');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+          if (event.target == modals) {
+            modal.sstyle.display = "none";
+          }
+        }
+      </script>
+
+      <script>
+        // Get the modal
+        var exp = document.getElementById('id03');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+          if (event.target == modals) {
+            modal.sstyle.display = "none";
+          }
+        }
+      </script>
+  </header>
+
+  <!-- Include links to JavaScript files below -->
+  <script src="https://kit.fontawesome.com/c7070aa968.js" crossorigin="anonymous"></script>
+  <script src="./node_modules/axios/dist/axios.js"></script>
+  <script src="./node_modules/jquery/dist/jquery.js"></script>
+  <script src="./javascript/renderIndex.js" type="module"></script>
+</body>
+
 </html>
