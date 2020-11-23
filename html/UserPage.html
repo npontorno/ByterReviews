@@ -1,20 +1,18 @@
-<!---STILL needs modification-->
-
 <!DOCTYPE html>
 <html>
+
 <title>Profile</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!--- All the styling I need to edit colors etc and make this into a css file rather than links-->
 <link rel="stylesheet" type="text/css" href="../css/profile.css">
-
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <!--Common Font-->
-<style> 
+<style>
   html,
   body,
   h1,
@@ -26,43 +24,43 @@
   }
 </style>
 
-
 <body class="w3-theme-l5">
 
   <!-- Navbar -->
   <div class="w3-top">
     <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
-      
+
       <!-- If On smaller screens 
       <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2"
         href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>-->
 
-        <!--- Start NAV-->
-      <a href= "../index.html" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fas fa-drumstick-bite"></i> Byter</a> <!--- this will take person back to explore page-->
+      <!--- this will take person back to explore page-->
+      <a href="../index.html" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i
+          class="fas fa-drumstick-bite"></i> Byter</a>
 
       <div class="w3-dropdown-hover w3-hide-small">
         <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span
-            class="w3-badge w3-right w3-small w3-green"> <!--Insert Notification Number?--></span></button>
+            class="w3-badge w3-right w3-small w3-green">
+            <!--Insert Notification Number?--></span></button>
+
         <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
           <!--- <a href="#" class="w3-bar-item w3-button">One new friend request</a> Notification Skeleton--->
         </div>
       </div>
-      <!--- End of NAV and Sign out Menu -->
-     
 
-        <!--- <div class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white">---->
-          
-          <div class="w3-dropdown-hover w3-hide-small" >
-            <button class="w3-button w3-padding-large" ><i class="fa fa-user"></i><span class="w3-badge w3-right w3-small w3-green"></span></button>     
-            <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
-              <a onclick="document.getElementById('editform').style.display='block'" style="width:auto;" class="w3-bar-item w3-button">Edit Profile</a>
-              <a href="#" class="w3-bar-item w3-button" id = "logout">Logout</a>
-              
-            </div>
-          </div>
+      <!--- <div class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white">---->
 
-        
-      
+      <div class="w3-dropdown-hover w3-hide-small">
+        <button class="w3-button w3-padding-large"><i class="fa fa-user"></i><span
+            class="w3-badge w3-right w3-small w3-green"></span></button>
+
+        <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
+          <a onclick="document.getElementById('editform').style.display='block'" style="width:auto;"
+            class="w3-bar-item w3-button">Edit Profile</a>
+
+          <a href="#" class="w3-bar-item w3-button" id="logout">Logout</a>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -83,67 +81,69 @@
         <!-- Profile -->
         <div class="w3-card w3-round w3-white">
           <div class="w3-container">
-            <h4 class="w3-center" id = "profile" >Name</h4> <!--- Insert First Name, Last Name-->
+            <h4 class="w3-center" id="profile">Name</h4>
+
+            <!--- Insert First Name, Last Name-->
             <p class="w3-center">
-              
               <!---<img src="/w3images/avatar3.png" class="w3-circle" style="height:106px;width:106px"
                 alt="Avatar"></p> for profile image--->
-            <hr>
-            <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme" id = "pemail"></i></p>
-            <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme" id = "numOfReviews"></i></p>
+
+              <hr>
+            <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme" id="pemail"></i></p>
+            <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme" id="numOfReviews"></i></p>
             <!--- <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> April 1, 1988</p> --->
           </div>
-        </div>
-        <br>
+        </div><br>
 
         <div id="editform" class="modal">
-            <span onclick="document.getElementById('editform').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <form class="modal-content">
-              <div class="container">
-                <h1 style = "color:black"><center>Edit</center></h1>
-                <hr>
-                <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
-<p><label for="file" style="cursor: pointer; color:blue">Edit Profile Image</label></p>
-<p><img id="output" width="200" /></p>
+          <span onclick="document.getElementById('editform').style.display='none'" class="close"
+            title="Close Modal">&times;</span>
 
-<script>
-var loadFile = function(event) {
-	var image = document.getElementById('output');
-	image.src = URL.createObjectURL(event.target.files[0]);
-};
-</script>
-          
-          <label for="fname" ><b>First Name</b></label>
-          <input type="text" placeholder="" name="fname" id = "fname" >
-          <label for="lname"><b>Last Name</b></label>
-          <input type="text" placeholder="" name="lname"  id = "lname">
+          <form class="modal-content">
+            <div class="container">
+              <h1 style="color:black">
+                <center>Edit</center>
+              </h1>
 
-                <label for="psw" style = "color:black"><b>New Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" id="pswS">
-          
-                <label for="psw-repeat" style = "color:black"><b>Confirm Password</b></label>
-                <input type="password" placeholder="Repeat Password" name="psw-repeat" id = "rpswS">
-               
-          
-                <div class="clearfix">
-                  <button type="button" onclick="document.getElementById('editform').style.display='none'" class="cancelbtn">Cancel</button>
-                  <button type="submit" class="signupbtn">Save Changes</button>
-                </div>
+              <hr>
+              <p><input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)"
+                  style="display: none;"></p>
+
+              <p><label for="file" style="cursor: pointer; color:blue">Edit Profile Image</label></p>
+              <p><img id="output" width="200" /></p>
+
+              <script>
+                var loadFile = function (event) {
+                  var image = document.getElementById('output');
+                  image.src = URL.createObjectURL(event.target.files[0]);
+                };
+              </script>
+
+              <label for="fname"><b>First Name</b></label>
+              <input type="text" placeholder="" name="fname" id="fname">
+
+              <label for="lname"><b>Last Name</b></label>
+              <input type="text" placeholder="" name="lname" id="lname">
+
+              <label for="psw" style="color:black"><b>New Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" id="pswS">
+
+              <label for="psw-repeat" style="color:black"><b>Confirm Password</b></label>
+              <input type="password" placeholder="Repeat Password" name="psw-repeat" id="rpswS">
+
+              <div class="clearfix">
+                <button type="button" onclick="document.getElementById('editform').style.display='none'"
+                  class="cancelbtn">Cancel</button>
+
+                <button type="submit" class="signupbtn">Save Changes</button>
               </div>
-           </form>
-          </div>
-          
-
-        
-        
-  
-
-        <!-- End Left Column -->
+            </div>
+          </form>
+        </div>
       </div>
 
       <!-- Middle Column -->
       <div class="w3-col m7">
-
         <div class="w3-row-padding">
           <div class="w3-col m12">
             <div class="w3-card w3-round w3-white">
@@ -155,43 +155,32 @@ var loadFile = function(event) {
         </div>
 
         <!--- Render All posted reviews-->
-
-        <div class="w3-container w3-card w3-white w3-round w3-margin" id = "postDemo"><br>
+        <div class="w3-container w3-card w3-white w3-round w3-margin" id="postDemo"><br>
           <!--- Profile Image <img src="/w3images/avatar2.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">--->
-          <span class="w3-right w3-opacity" id = "posttime">TimeStamp</span>
-          <h4 id = "postName">John Doe</h4>
-          
-          
-          <br>
-
-
+          <span class="w3-right w3-opacity" id="posttime">TimeStamp</span>
+          <h4 id="postName">John Doe</h4><br>
           <hr class="w3-clear">
 
           <!---Body of the message-->
-          <p id = "postBody">Insert Message</p>
+          <p id="postBody">Insert Message</p>
 
           <div class="w3-row-padding" style="margin:0 -16px">
             <div class="w3-half">
-             <!--- <img src="/w3images/lights.jpg" style="width:100%" alt="Northern Lights" class="w3-margin-bottom">-->
+              <!--- <img src="/w3images/lights.jpg" style="width:100%" alt="Northern Lights" class="w3-margin-bottom">-->
             </div>
-           
           </div>
+
           <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>
              Like</button>
-          
         </div>
-
-        <!-- End Middle Column -->
       </div>
 
       <!-- Right Column -->
       <div class="w3-col m2">
         <div class="w3-card w3-round w3-white w3-center">
           <div class="w3-container">
-
           </div>
-        </div>
-        <br>
+        </div><br>
 
         <div class="w3-card w3-round w3-white w3-center">
           <div class="w3-container">
@@ -202,32 +191,23 @@ var loadFile = function(event) {
               </div>
             </div>
           </div>
-        </div>
-        <br>
+        </div><br>
 
         <div class="w3-card w3-round w3-white w3-padding-16 w3-center">
-        </div>
-        <br>
+        </div><br>
 
         <div class="w3-card w3-round w3-white w3-padding-32 w3-center">
         </div>
-
-        <!-- End Right Column -->
       </div>
-
-      <!-- End Grid -->
     </div>
-
-    <!-- End Page Container -->
-  </div>
-  <br>
+  </div><br>
+  <!-- End Page Container -->
 
   <!-- Footer -->
-
   <script>
     // Accordion
     function myFunction(id) {
-      
+
       var x = document.getElementById(id);
       if (x.className.indexOf("w3-show") == -1) {
         x.className += " w3-show";
@@ -248,22 +228,20 @@ var loadFile = function(event) {
     //     x.className = x.className.replace(" w3-show", "");
     //   }
     // }
-
-
   </script>
-
 
   <script>
-  // Get the modal
-  var modal = document.getElementById('id01');
-  
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
+    // Get the modal
+    var modal = document.getElementById('id01');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
     }
-  }
   </script>
+
   <!-- Include links to JavaScript files below -->
   <script src="https://kit.fontawesome.com/c7070aa968.js" crossorigin="anonymous"></script>
   <script src="../node_modules/axios/dist/axios.js"></script>
