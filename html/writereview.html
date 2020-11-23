@@ -1,70 +1,85 @@
 <!DOCTYPE html>
 <html>
+
 <title></title>
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <link rel="stylesheet" type="text/css" href="../css/style.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
-html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
+  html,
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: "Open Sans", sans-serif
+  }
 </style>
-<body class="w3-theme-l5">
-    <form method="post" action="" onSubmit="return validateForm();">
-      <div style="width: 400px;">
-      </div>
-      <div style="padding-bottom: 18px;font-size : 24px;">Product Review</div>
-      <div style="padding-bottom: 18px;">Reviewer<span style="color: red;"> *</span><br/>
-      <input type="text" id="data_2" name="data_2" style="width : 450px;" class="form-control"/>
-      </div>
-      
-      <div style="padding-bottom: 18px;">Rate this product<span style="color: red;"> *</span><br/>
-      <div class="rate">
-          <input type="radio" id="star5" name="rate" value="5" />
-          <label for="star5" title="text">5 stars</label>
-          <input type="radio" id="star4" name="rate" value="4" />
-          <label for="star4" title="text">4 stars</label>
-          <input type="radio" id="star3" name="rate" value="3" />
-          <label for="star3" title="text">3 stars</label>
-          <input type="radio" id="star2" name="rate" value="2" />
-          <label for="star2" title="text">2 stars</label>
-          <input type="radio" id="star1" name="rate" value="1" />
-          <label for="star1" title="text">1 star</label>
-        </div>
-      </div>
-    <br>
-      <div style="padding-bottom: 18px;">Menu Item: <br/>
-      <textarea id="data_6" false name="data_6" style="width : 450px;" rows="3" class="form-control"></textarea>
-      </div>
-      
-      <div style="padding-bottom: 18px;">Review<span style="color: red;"> *</span><br/>
-      <textarea id="data_8" false name="data_8" style="width : 450px;" rows="9" class="form-control"></textarea>
-      </div>
 
-      <div style="padding-bottom: 18px;"><input name="skip_Submit" value="Submit" type="submit"/></div>
-      <div>
+<body class="w3-theme-l5">
+  <form method="post" action="" onSubmit="return validateForm();">
+    <div style="width: 400px;">
+    </div>
+
+    <div style="padding-bottom: 18px;font-size : 24px;">Product Review</div>
+
+    <div style="padding-bottom: 18px;">Reviewer<span style="color: red;"> *</span><br />
+      <input type="text" id="data_2" name="data_2" style="width : 450px;" class="form-control" />
+    </div>
+
+    <div style="padding-bottom: 18px;">Rate this product<span style="color: red;"> *</span><br />
+      <div class="rate">
+        <input type="radio" id="star5" name="rate" value="5" />
+        <label for="star5" title="text">5 stars</label>
+
+        <input type="radio" id="star4" name="rate" value="4" />
+        <label for="star4" title="text">4 stars</label>
+
+        <input type="radio" id="star3" name="rate" value="3" />
+        <label for="star3" title="text">3 stars</label>
+
+        <input type="radio" id="star2" name="rate" value="2" />
+        <label for="star2" title="text">2 stars</label>
+
+        <input type="radio" id="star1" name="rate" value="1" />
+        <label for="star1" title="text">1 star</label>
       </div>
-      </form>
-      
-      <script type="text/javascript">
-      function validateForm() {
+    </div><br>
+
+    <div style="padding-bottom: 18px;">Menu Item: <br />
+      <textarea id="data_6" false name="data_6" style="width : 450px;" rows="3" class="form-control"></textarea>
+    </div>
+
+    <div style="padding-bottom: 18px;">Review<span style="color: red;"> *</span><br />
+      <textarea id="data_8" false name="data_8" style="width : 450px;" rows="9" class="form-control"></textarea>
+    </div>
+
+    <div style="padding-bottom: 18px;"><input name="skip_Submit" value="Submit" type="submit" /></div>
+    <div>
+    </div>
+  </form>
+
+  <script type="text/javascript">
+    function validateForm() {
       if (isEmpty(document.getElementById('data_2').value.trim())) {
-      alert('Reviewer is required!');
-      return false;
+        alert('Reviewer is required!');
+        return false;
       }
-      
+
       if (isEmpty(document.getElementById('data_8').value.trim())) {
-      alert('Review is required!');
-      return false;
+        alert('Review is required!');
+        return false;
       }
       return true;
-      }
-      function isEmpty(str) { return (str.length === 0 || !str.trim()); }
-      
-      </script>
-
+    }
+    function isEmpty(str) { return (str.length === 0 || !str.trim()); }
+  </script>
 </body>
-</html> 
+
+</html>
