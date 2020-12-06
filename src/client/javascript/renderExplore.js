@@ -46,7 +46,7 @@ export const renderRestaurant = function(restaurant)
     let format =
         `<div class="w3-container w3-card w3-white w3-round w3-margin" id = "${restaurant.id}"><br>
         <i class="fa fa-cutlery" ></i>
-        <h4><a href="http://localhost:3000/html/ResturantPage.html">${restaurant.name}</a></h4><br>
+        <h4><a href="http://localhost:3000/src/client/html/restaurantPage.html">${restaurant.name}</a></h4><br>
         <hr class="w3-clear">
         <p></p>
         <div class="w3-row-padding" style="margin:0 -16px">
@@ -103,6 +103,6 @@ $(async function()
             return;
         }
 
-        window.location.href = "http://localhost:3000/html/claim.html";
+        window.location.href = "http://localhost:3000/src/client/html/claimRestaurant.html";
     })
 });

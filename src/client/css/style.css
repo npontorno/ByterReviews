@@ -2,28 +2,26 @@
     margin: 0;
     padding: 0;
 }
+
 header{
     background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../Images/IMG_33.jpg);
     /*linear gradient adds a shade over layer on top of background picture*/
     height: 100vh; 
     background-size: cover;
     background-position: center;
-
 }
 
 p {
    color:black; 
 }
-h1 {
 
+h1 {
   color: white;
   font-size: 10px;
 } 
 
 .parallax {
     /* The image used */
-    
-  
     /* Set a specific height */
     min-height: 800px;
   
@@ -33,23 +31,23 @@ h1 {
     background-repeat: no-repeat;
     background-size: cover;
   }
+
 ul {
     float: right;
     list-style-type: none;
     margin-top: 15px; 
-
 }
+
 ul li{
     display: inline-block; 
 }
+
 .main {
     max-width: 1200px; 
     margin:auto; 
 }
 
 /*p{ background-color: #ff7f50; } added only for assignment*/
-
-   
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 body{
@@ -60,15 +58,17 @@ body{
 .w3-quarter{
 border: solid black 2px; 
 }
+
 .search {
   width: 100%;
   position: relative;
-  display: flex;
-  
+  display: flex; 
 }
+
 .search2 {
  color:white; 
 }
+
 .clicked {
   background-color: black;
 }
@@ -95,7 +95,6 @@ border: solid black 2px;
   display: block;
 }
 
-
 .searchTerm {
   width: 200%;
   border-right: none;
@@ -120,16 +119,17 @@ border: solid black 2px;
    cursor: pointer;
   font-size: 20px;
   background:none ;
-
-  
 }
+
 input{
   font-size: 16px; 
 }
+
 i{
   color: #fff;
   size:40px;
 }
+
 /*Resize the wrap to see the search bar change!*/
 .wrap{
   width: 60%;
@@ -138,7 +138,6 @@ i{
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
@@ -266,11 +265,7 @@ hr {
   background-color:rgb(245, 245, 245);
   color: black;
   font-size: 30px; 
-} 
-
-
-
-
+}
 
 .food {
   background-color: gray;
@@ -281,15 +276,18 @@ hr {
   margin: 0;
   padding: 0;
 }
+
 .rate {
   float: left;
   height: 46px;
   padding: 0 10px;
 }
+
 .rate:not(:checked) > input {
   position:absolute;
   top:-9999px;
 }
+
 .rate:not(:checked) > label {
   float:right;
   width:1em;
@@ -299,16 +297,20 @@ hr {
   font-size:30px;
   color:#ccc;
 }
+
 .rate:not(:checked) > label:before {
   content: '★ ';
 }
+
 .rate > input:checked ~ label {
   color: #ffc700;    
 }
+
 .rate:not(:checked) > label:hover,
 .rate:not(:checked) > label:hover ~ label {
   color: #deb217;  
 }
+
 .rate > input:checked + label:hover,
 .rate > input:checked + label:hover ~ label,
 .rate > input:checked ~ label:hover,
@@ -316,7 +318,6 @@ hr {
 .rate > label:hover ~ input:checked ~ label {
   color: #c59b08;
 }
-
 
 /* W3.CSS 4.13 June 2019 by Jan Egil and Borge Refsnes */
 html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}

@@ -81,7 +81,7 @@ export const claimRestaurant2 = async function(apiRestaurant)
     postRestaurant(restaurant);
     localStorage.setItem("restaurant", restaurant);
     alert("Restaurant successfully added, try searching for it!");
-    window.location.href = "http://localhost:3000/html/explore.html";
+    window.location.href = "http://localhost:3000/src/client/html/explore.html";
     return;
 }
 
@@ -134,13 +134,13 @@ $(async function()
     if (localStorage.getItem("loggedIn").toString() == "false")
     {
         alert("Not logged in!");
-        window.location.href = "http://localhost:3000/";
+        window.location.href = "http://localhost:3000/src/client/html/home.html";
     }
 
     if (JSON.parse(localStorage.getItem("account")).isOwner.toString() == "false")
     {
         alert("Only verified restaurant owners can add restaurants.")
-        window.location.href = "http://localhost:3000/";
+        window.location.href = "http://localhost:3000/src/client/html/home.html";
     }
 
     loadRestaurantsIntoDOM1();

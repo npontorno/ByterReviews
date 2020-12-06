@@ -81,7 +81,7 @@ export const handleAddItemButtonPress = function()
 
     postItem(item);
     alert("Item post pending, check back soon.");
-    window.location.href = "http://localhost:3000/html/explore.html";
+    window.location.href = "http://localhost:3000/src/client/html/explore.html";
     return;
 }
 
@@ -92,7 +92,7 @@ export const renderItem = function(item)
 {
     let format =
         `<div class="column" id="${item.id}" style="background-color:#aaa;">
-        <a href="http://localhost:3000/html/Foodpage.html" >${item.name}</a>
+        <a href="http://localhost:3000/src/client/html/menuItemPage.html" >${item.name}</a>
         <p></p>
         </div>`
 

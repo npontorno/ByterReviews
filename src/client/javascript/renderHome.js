@@ -132,7 +132,7 @@ export const login2 = async function(accounts, email, pass)
     {
         localStorage.setItem("loggedIn", "true");
         localStorage.setItem("account", account);
-        window.location.href = "http://localhost:3000//html/loginindex.html";
+        window.location.href = "http://localhost:3000/src/client/html/homeLoggedIn.html";
         alert("Successfully logged in!");
         return;
     }
@@ -230,7 +230,7 @@ $(async function()
 
     else if (localStorage.getItem("loggedIn").toString() == "true")
     {
-        window.location.href = "http://localhost:3000/html/loginindex.html";
+        window.location.href = "http://localhost:3000/src/client/html/homeLoggedIn.html";
     }
 
     $(document).on("click", "#id01 .signupbtn", function()
@@ -251,7 +251,7 @@ $(async function()
         let restaurantId = searchTerm.id;
 
         handleSearchButtonPress1(restaurantId);
-        window.location.href = "http://localhost:3000/html/ResturantPage.html"
+        window.location.href = "http://localhost:3000/src/client/html/restaurantPage.html"
     })
 
     $(document).on("keypress", ".searchTerm", function()

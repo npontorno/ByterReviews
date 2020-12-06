@@ -15,6 +15,7 @@
   width: 100%;
   opacity: 0.9;
 }
+
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
@@ -66,6 +67,7 @@
     clear: both;
     display: table;
   }
+
   /* Extra styles for the cancel button */
 .cancelbtn {
   padding: 14px 20px;
@@ -87,7 +89,8 @@
 .container {
   padding: 10px;
 }
-  /*Resize the wrap to see the search bar change!*/
+
+/* Resize the wrap to see the search bar change! */
 .wrap{
   width: 60%;
   position: absolute;
@@ -95,7 +98,6 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
@@ -115,8 +117,6 @@ input[type=text]:focus, input[type=password]:focus {
   background-color: #ddd;
   outline: none;
 }
-
-
 
 .w3-theme-l5 {color:rgb(248, 247, 247) !important; background-color:#50585859 !important}
 .w3-theme-l4 {color:#000 !important; background-color:#dfe8e8 !important}
@@ -141,7 +141,6 @@ input[type=text]:focus, input[type=password]:focus {
 .w3-hover-text-theme:hover {color:#607d8b !important}
 .w3-hover-border-theme:hover {border-color:#607d8b !important}
 
-
 * {
   box-sizing: border-box;
 }
@@ -159,6 +158,7 @@ input[type=text]:focus, input[type=password]:focus {
   display: table;
   clear: both;
 }
+
 /* Style the buttons */
 .btn {
   border: none;
@@ -177,8 +177,6 @@ input[type=text]:focus, input[type=password]:focus {
   color: white;
 }
 
-
-
 .food {
   background-color: gray;
   border: solid 4px black;
@@ -188,15 +186,18 @@ input[type=text]:focus, input[type=password]:focus {
   margin: 0;
   padding: 0;
 }
+
 .rate {
   float: left;
   height: 46px;
   padding: 0 10px;
 }
+
 .rate:not(:checked) > input {
   position:absolute;
   top:-9999px;
 }
+
 .rate:not(:checked) > label {
   float:right;
   width:1em;
@@ -206,16 +207,20 @@ input[type=text]:focus, input[type=password]:focus {
   font-size:30px;
   color:#ccc;
 }
+
 .rate:not(:checked) > label:before {
   content: '★ ';
 }
+
 .rate > input:checked ~ label {
   color: #ffc700;    
 }
+
 .rate:not(:checked) > label:hover,
 .rate:not(:checked) > label:hover ~ label {
   color: #deb217;  
 }
+
 .rate > input:checked + label:hover,
 .rate > input:checked + label:hover ~ label,
 .rate > input:checked ~ label:hover,
@@ -224,21 +229,24 @@ input[type=text]:focus, input[type=password]:focus {
   color: #c59b08;
 }
 
-
 table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
 }
+
 th, td {
   padding: 15px;
   text-align: left;
 }
+
 table#t01 tr:nth-child(even) {
   background-color: #eee;
 }
+
 table#t01 tr:nth-child(odd) {
  background-color: #fff;
 }
+
 table#t01 th {
   background-color: black;
   color: white;

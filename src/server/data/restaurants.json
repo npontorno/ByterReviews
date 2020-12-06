@@ -1,0 +1,71 @@
+[
+  {
+    "id": 2221607226582797,
+    "ownerId": 1,
+    "rating": 3,
+    "name": "Cosmic Cafe",
+    "city": "Dallas",
+    "state": "",
+    "zip": "75219",
+    "address": "2912 Oak Lawn Avenue, Dallas 75219",
+    "cuisine": "Indian, Mediterranean",
+    "items": [
+      {
+        "id": 3331607226826976,
+        "name": "Tea",
+        "image": "url",
+        "price": "$4.25",
+        "rating": 3,
+        "category": "Drink"
+      }
+    ]
+  },
+  {
+    "id": 2221607226637716,
+    "ownerId": 1,
+    "rating": 3,
+    "name": "Au Cheval",
+    "city": "Chicago",
+    "state": "",
+    "zip": "60607",
+    "address": "800 W Randolph Street, Chicago 60607",
+    "cuisine": "Burger, New American, Diner",
+    "items": []
+  },
+  {
+    "id": 2221607226677121,
+    "ownerId": 1,
+    "rating": 3,
+    "name": "The Curry Culture",
+    "city": "Singapore",
+    "state": "",
+    "zip": "229457",
+    "address": "31 Cuppage Road, Cuppage 229457",
+    "cuisine": "Continental, Indian, Asian",
+    "items": []
+  },
+  {
+    "id": 2221607226697451,
+    "ownerId": 1,
+    "rating": 3,
+    "name": "Versailles Restaurant",
+    "city": "Miami",
+    "state": "",
+    "zip": "33135",
+    "address": "3555 SW 8th Street, Little Havana, Miami 33135",
+    "cuisine": "Cuban",
+    "items": []
+  },
+  {
+    "id": 2221607226724762,
+    "ownerId": 1,
+    "rating": 3,
+    "name": "Bao",
+    "city": "London",
+    "state": "",
+    "zip": "W1F 9AS",
+    "address": "53 Lexington Street, Soho, London W1F 9AS",
+    "cuisine": "Taiwanese, Street Food",
+    "items": []
+  }
+]

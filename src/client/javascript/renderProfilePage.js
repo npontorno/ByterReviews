@@ -88,7 +88,7 @@ $(async function()
     else
     {
         alert("Not logged in!");
-        window.location.href = "http://localhost:3000/";
+        window.location.href = "http://localhost:3000/src/client/html/home.html";
     }
 
     $(document).on("click", "#logout", function()
@@ -96,7 +96,7 @@ $(async function()
         localStorage.setItem("loggedIn", false);
         localStorage.setItem("account", {});
         alert("User logged out!");
-        window.location.href = "http://localhost:3000/";
+        window.location.href = "http://localhost:3000/src/client/html/home.html";
     })
 
     $(document).on("click", "#editform .signupbtn", function()

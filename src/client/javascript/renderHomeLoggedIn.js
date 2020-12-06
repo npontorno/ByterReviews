@@ -94,7 +94,7 @@ $(async function()
     if (localStorage.getItem("loggedIn").toString() == "false")
     {
         alert("Not logged in!");
-        window.location.href = "http://localhost:3000/";
+        window.location.href = "http://localhost:3000/src/client/html/home.html";
     }
 
     $(document).on("click", ".main ul .loginb", function()
@@ -102,7 +102,7 @@ $(async function()
         localStorage.setItem("loggedIn", "false");
         localStorage.setItem("account", {});
         alert("User logged out!");
-        window.location.href = "http://localhost:3000/";
+        window.location.href = "http://localhost:3000/src/client/html/home.html";
     })
 
     $(document).on("click", ".searchButton", function()
@@ -113,7 +113,7 @@ $(async function()
         let restaurantId = searchTerm.id;
 
         handleSearchButtonPress1(restaurantId);
-        window.location.href = "http://localhost:3000/html/ResturantPage.html"
+        window.location.href = "http://localhost:3000/src/client/html/restaurantPage.html"
     })
 
     $(document).on("keypress", ".searchTerm", function()

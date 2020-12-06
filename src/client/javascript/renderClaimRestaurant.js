@@ -30,7 +30,7 @@ export const handleClaimButtonPress1 = async function()
 export const handleClaimButtonPress2 = async function(cities)
 {
     localStorage.setItem("cities", JSON.stringify(cities));
-    window.location.href = "http://localhost:3000/html/listcities.html";
+    window.location.href = "http://localhost:3000/src/client/html/claimRestaurantCityList.html";
     return;
 }
 
@@ -42,13 +42,13 @@ $(async function()
     if (localStorage.getItem("loggedIn").toString() == "false")
     {
         alert("Not logged in!");
-        window.location.href = "http://localhost:3000/";
+        window.location.href = "http://localhost:3000/src/client/html/home.html";
     }
 
     if (JSON.parse(localStorage.getItem("account")).isOwner.toString() == "false")
     {
         alert("Only verified restaurant owners can add restaurants.");
-        window.location.href = "http://localhost:3000/";
+        window.location.href = "http://localhost:3000/src/client/html/home.html";
     }
 
     $(document).on("click", ".signupbtn", function()

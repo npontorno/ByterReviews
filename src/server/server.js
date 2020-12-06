@@ -15,7 +15,7 @@ let restaurants = JSON.parse(fs.readFileSync(path.resolve(__dirname, "./data/res
 //
 let app = express();
 let server = app.listen(3002, console.log("The server is listening on port 3002."));
-app.use(express.static("client"));
+app.use(express.static("./src/server"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(cors());
