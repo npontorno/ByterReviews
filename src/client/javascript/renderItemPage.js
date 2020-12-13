@@ -1,3 +1,5 @@
+var rating = 0
+
 //
 // Axios Functions
 //
@@ -49,7 +51,6 @@ export const handlePostButtonPress = async function()
 {
     let post = {};
     let body = $('#data_8').val();
-    let rating = 3;
     let upvotes = 0;
     let timeStamp = new Date().toLocaleString();
     let reviewId = parseInt(444 + "" + Date.now());
@@ -77,6 +78,7 @@ export const handlePostButtonPress = async function()
     };
 
     postReview(post, accountId);
+    rating = 0
     alert("Review Posted!");
     return;
 };
@@ -236,5 +238,17 @@ $(async function()
         }
 
         handleDeleteButtonPress1(this.parentNode.id);
+    })
+
+    $(document).on("click", ".rate", function(event)
+    {
+        let id = event.target.id
+
+        if (id == "")
+        {
+            return
+        }
+
+        rating = parseInt(id.charAt(4))
     })
 });
